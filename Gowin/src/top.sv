@@ -1,12 +1,13 @@
 `default_nettype none
 // Apple IIe Aux Card
 // 2026.01.12 80 Colmun Text
+// 2026.03.06 for V1.2 schematic
 
 module top (
     inout wire [7:0] d,
     input wire [7:0] a,
     input wire pras_n,
-    input wire ldps,
+    input wire serout,
     input wire q3,
     input wire phi0,
     input wire phi1,
@@ -40,10 +41,10 @@ Gowin_rPLL rpll (
     .clkin(clk14m) //input clkin
 );
 
-assign led1 = gr;
-assign led2 = c07x;
-assign led3 = sync;
-assign led4 = d_rw;
+assign led1 = ra_en;
+assign led2 = vid_en;
+assign led3 = d_rw;
+assign led4 = md_en;
 assign led5 = vid80;
 assign led6 = an3;
 
@@ -59,12 +60,8 @@ always_ff@(negedge pras_n) begin
     row <= a;
 end
 
-assign ra_en = ~q3;
-assign vid_en = q3;
-logic [7:0] vid;
-always_ff@(negedge ldps) begin
-    vid <= a;
-end
+assign ra_en = 0;
+assign vid_en = 1;
 
 logic [15:0] addr;
 logic [7:0] din;
@@ -95,19 +92,6 @@ Gowin_RAM16S sram (
     .di(din), //input [7:0] di
     .clk(q3) //input clk
 );
-
-logic [3:0] cycle;
-always_ff@(posedge clk14m) begin
-    if (phi0) begin
-        if (cycle >= 13) begin
-            cycle = 0;
-        end else begin
-            cycle += 1;
-        end
-    end else begin
-        cycle += 1;
-    end
-end
 
 endmodule
 

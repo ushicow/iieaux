@@ -41,14 +41,12 @@
             <Signal capture_enable="true">en80</Signal>
             <Signal capture_enable="true">rw80</Signal>
             <Signal capture_enable="true">sync</Signal>
-            <Signal capture_enable="true">ldps</Signal>
             <Signal capture_enable="true">gr</Signal>
             <Signal capture_enable="true">vid80</Signal>
             <Signal capture_enable="true">an3</Signal>
             <Signal capture_enable="true">ra9</Signal>
             <Signal capture_enable="true">ra10</Signal>
             <Signal capture_enable="true">md_en</Signal>
-            <Signal capture_enable="true">vid_en</Signal>
             <Signal capture_enable="true">d_rw</Signal>
             <Bus capture_enable="true" name="din[7:0]">
                 <Signal>din[7]</Signal>
@@ -80,37 +78,6 @@
                 <Signal>a[1]</Signal>
                 <Signal>a[0]</Signal>
             </Bus>
-            <Bus capture_enable="true" name="vid[7:0]">
-                <Signal>vid[7]</Signal>
-                <Signal>vid[6]</Signal>
-                <Signal>vid[5]</Signal>
-                <Signal>vid[4]</Signal>
-                <Signal>vid[3]</Signal>
-                <Signal>vid[2]</Signal>
-                <Signal>vid[1]</Signal>
-                <Signal>vid[0]</Signal>
-            </Bus>
-            <Signal capture_enable="true">ra_en</Signal>
-            <Signal capture_enable="false">pal</Signal>
-            <Bus capture_enable="false" name="ad[9:0]">
-                <Signal>ad[9]</Signal>
-                <Signal>ad[8]</Signal>
-                <Signal>ad[7]</Signal>
-                <Signal>ad[6]</Signal>
-                <Signal>ad[5]</Signal>
-                <Signal>ad[4]</Signal>
-                <Signal>ad[3]</Signal>
-                <Signal>ad[2]</Signal>
-                <Signal>ad[1]</Signal>
-                <Signal>ad[0]</Signal>
-            </Bus>
-            <Bus capture_enable="false" name="cycle[3:0]">
-                <Signal>cycle[3]</Signal>
-                <Signal>cycle[2]</Signal>
-                <Signal>cycle[1]</Signal>
-                <Signal>cycle[0]</Signal>
-            </Bus>
-            <Signal capture_enable="false">c07x</Signal>
         </SignalList>
         <Triggers>
             <Trigger index="0">
@@ -189,5 +156,5 @@
             <Expression>M3</Expression>
         </Expressions>
     </AoCore>
-    <GAO_ID>0101101011001000</GAO_ID>
+    <GAO_ID>1110001101001110</GAO_ID>
 </GAO_CONFIG>

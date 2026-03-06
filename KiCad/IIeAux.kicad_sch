@@ -6,10 +6,11 @@
 	(paper "A4")
 	(title_block
 		(title "IIeAux")
-		(date "2026-03-02")
-		(rev "1.1")
+		(date "2026-03-06")
+		(rev "1.2")
 		(company "nanja.info")
 		(comment 1 "Apple IIe Aux Slot FPGA Card")
+		(comment 2 "Use SEROUT signal")
 	)
 	(lib_symbols
 		(symbol "Apple2_bus:R"
@@ -5563,7 +5564,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 179.07) (xy 121.92 179.07)
+			(xy 110.49 179.07) (xy 121.92 179.07)
 		)
 		(stroke
 			(width 0)
@@ -6953,7 +6954,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 186.69) (xy 121.92 186.69)
+			(xy 110.49 186.69) (xy 121.92 186.69)
 		)
 		(stroke
 			(width 0)
@@ -9759,7 +9760,7 @@
 			)
 		)
 	)
-	(global_label "LDPS"
+	(global_label "SEROUT"
 		(shape input)
 		(at 119.38 104.14 180)
 		(fields_autoplaced yes)
@@ -9771,7 +9772,7 @@
 		)
 		(uuid "54442b72-80ff-4ffc-b97b-d08cf23c516d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 111.6172 104.14 0)
+			(at 109.1377 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15002,7 +15003,7 @@
 	)
 	(symbol
 		(lib_id "IIeAux:C")
-		(at 99.06 182.88 0)
+		(at 110.49 182.88 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15011,7 +15012,7 @@
 		(fields_autoplaced yes)
 		(uuid "96ba823b-b79b-485a-9590-c09ba37969c6")
 		(property "Reference" "C6"
-			(at 102.87 181.6099 0)
+			(at 114.3 181.6099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15020,7 +15021,7 @@
 			)
 		)
 		(property "Value" "0.1u"
-			(at 102.87 184.1499 0)
+			(at 114.3 184.1499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15029,7 +15030,7 @@
 			)
 		)
 		(property "Footprint" "IIeAux:C_Disc_D4.3mm_W1.9mm_P5.08mm"
-			(at 100.0252 186.69 0)
+			(at 111.4552 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15038,7 +15039,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 99.06 182.88 0)
+			(at 110.49 182.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15047,7 +15048,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 99.06 182.88 0)
+			(at 110.49 182.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
