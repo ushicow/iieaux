@@ -1,0 +1,35 @@
+Reading netlist file: "/Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/impl/gwsynthesis/IIeAux1.vg"
+Parsing netlist file "/Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/impl/gwsynthesis/IIeAux1.vg" completed
+Processing netlist completed
+Reading constraint file: "/Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/src/iieAux1.cst"
+Physical Constraint parsed completed
+Running placement......
+[10%] Placement Phase 0 completed
+[20%] Placement Phase 1 completed
+[30%] Placement Phase 2 completed
+WARN  (TA1132) :  'y[0]' was determined to be a clock but was not created.
+WARN  (TA1132) :  'y[1]' was determined to be a clock but was not created.
+WARN  (TA1132) :  'tck_pad_i' was determined to be a clock but was not created.
+WARN  (TA1117) : Can't calculate clocks' relationship between: "clk14m" and "mclk"
+[50%] Placement Phase 3 completed
+Running routing......
+[60%] Routing Phase 0 completed
+[70%] Routing Phase 1 completed
+[80%] Routing Phase 2 completed
+WARN  (PR1014) : Generic routing resource will be used to clock signal 'y_d[0]' by the specified constraint. And then it may lead to the excessive delay or skew
+WARN  (PR1014) : Generic routing resource will be used to clock signal 'y_d[1]' by the specified constraint. And then it may lead to the excessive delay or skew
+[90%] Routing Phase 3 completed
+Running timing analysis......
+[95%] Timing analysis completed
+Placement and routing completed
+Bitstream generation in progress......
+Bitstream generation completed
+Running power analysis......
+[100%] Power analysis completed
+Generate file "/Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/impl/pnr/IIeAux1.power.html" completed
+Generate file "/Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/impl/pnr/IIeAux1.pin.html" completed
+Generate file "/Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/impl/pnr/IIeAux1.rpt.html" completed
+Generate file "/Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/impl/pnr/IIeAux1.rpt.txt" completed
+Generate file "/Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/impl/pnr/IIeAux1.tr.html" completed
+Sat Jan 24 14:51:02 2026
+

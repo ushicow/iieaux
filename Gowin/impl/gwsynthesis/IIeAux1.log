@@ -1,0 +1,66 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file '/Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/src/top.sv'
+Analyzing Verilog file '/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_crc32.v'
+Analyzing Verilog file '/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_match.v'
+Analyzing included file '/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_define.v'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_match.v":374)
+Back to file '/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_match.v'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_match.v":374)
+Analyzing included file '/Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/impl/gwsynthesis/RTL_GAO/ao_0/gw_ao_top_define.v'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_match.v":374)
+Back to file '/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_match.v'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_match.v":374)
+Analyzing included file '/Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/impl/gwsynthesis/RTL_GAO/ao_0/gw_ao_init.v'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_match.v":374)
+Back to file '/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_match.v'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_match.v":374)
+Analyzing Verilog file '/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_mem_ctrl.v'
+Analyzing included file '/Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/impl/gwsynthesis/RTL_GAO/ao_0/gw_ao_top_define.v'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_mem_ctrl.v":1256)
+Back to file '/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_mem_ctrl.v'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_mem_ctrl.v":1256)
+Analyzing Verilog file '/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_top.v'
+Analyzing included file '/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_define.v'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_top.v":3042)
+Back to file '/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_top.v'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_top.v":3042)
+Analyzing included file '/Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/impl/gwsynthesis/RTL_GAO/ao_0/gw_ao_top_define.v'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_top.v":3042)
+Back to file '/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_top.v'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_top.v":3042)
+Analyzing included file '/Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/impl/gwsynthesis/RTL_GAO/ao_0/gw_ao_expression.v'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_top.v":3042)
+Back to file '/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_top.v'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_top.v":3042)
+Analyzing included file '/Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/impl/gwsynthesis/RTL_GAO/ao_0/gw_ao_parameter.v'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_top.v":3042)
+Back to file '/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_top.v'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_top.v":3042)
+Analyzing included file '/Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/impl/gwsynthesis/RTL_GAO/ao_0/gw_ao_init.v'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_top.v":3042)
+Back to file '/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_top.v'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_top.v":3042)
+Analyzing Verilog file '/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_CON/gw_con_top.v'
+Analyzing included file '/Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/impl/gwsynthesis/RTL_GAO/ao_control/gw_con_top_define.v'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_CON/gw_con_top.v":377)
+Back to file '/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_CON/gw_con_top.v'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_CON/gw_con_top.v":377)
+Analyzing included file '/Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/impl/gwsynthesis/RTL_GAO/ao_control/gw_con_parameter.v'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_CON/gw_con_top.v":377)
+Back to file '/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_CON/gw_con_top.v'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_CON/gw_con_top.v":377)
+Analyzing Verilog file '/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/gw_jtag.v'
+Analyzing Verilog file '/Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/impl/gwsynthesis/RTL_GAO/gw_gao_top.v'
+Compiling module 'top'("/Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/src/top.sv":5)
+Compiling module 'gw_gao'("/Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/impl/gwsynthesis/RTL_GAO/gw_gao_top.v":1)
+Compiling module 'GW_JTAG'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/gw_jtag.v":1)
+Compiling module '**'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_CON/gw_con_top.v":377)
+Compiling module '**'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_top.v":3042)
+Compiling module '**'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_mem_ctrl.v":1256)
+Extracting RAM for identifier '**'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_mem_ctrl.v":1256)
+Compiling module '**'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_crc32.v":74)
+Compiling module '**'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_match.v":374)
+WARN  (EX3791) : Expression size ** truncated to fit in target size **("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_top.v":3042)
+Extracting RAM for identifier '**'("/Applications/GowinIDE.app/Contents/Resources/Gowin_EDA/IDE/data/ipcores/GAO/GW_AO_0/gw_ao_top.v":3042)
+Trying to combine GAO to RTL design
+NOTE  (EX0101) : Current top module is "top"
+[5%] Running netlist conversion ...
+WARN  (CV0016) : Input x is unused("/Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/src/top.sv":8)
+WARN  (CV0016) : Input pal is unused("/Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/src/top.sv":10)
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "/Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/impl/gwsynthesis/IIeAux1.vg" completed
+[100%] Generate report file "/Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/impl/gwsynthesis/IIeAux1_syn.rpt.html" completed
+GowinSynthesis finish

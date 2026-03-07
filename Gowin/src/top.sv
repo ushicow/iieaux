@@ -1,97 +1,44 @@
 `default_nettype none
 // Apple IIe Aux Card
-// 2026.01.12 80 Colmun Text
-// 2026.03.06 for V1.2 schematic
+// Test1 2026.01.12 by ushicow
 
 module top (
-    inout wire [7:0] d,
-    input wire [7:0] a,
-    input wire pras_n,
-    input wire serout,
-    input wire q3,
-    input wire phi0,
-    input wire phi1,
-    input wire en80,
-    input wire rw80,
-    input wire gr,
-    input wire vid80,
-    input wire an3,
-    input wire sync,
-    input wire clk14m,
-    input wire rw,
-    input wire c07x,
-    input wire ra9,
-    input wire ra10,
-    output reg ra_en,
-    output reg vid_en,
-    output wire d_rw,
-    output wire md_en,
-    output wire led1,
-    output wire led2,
-    output wire led3,
-    output wire led4,
-    output wire led5,
-    output wire led6,
+    input wire [7:0] d,
+    input wire [7:0] ra,
+    input wire [7:0] x,
+    input wire [7:0] y,
+    input wire pal,
     input wire mclk
 );
 
-logic sclk;
-Gowin_rPLL rpll (
-    .clkout(sclk), //output clkout
-    .clkin(clk14m) //input clkin
-);
-
-assign led1 = ra_en;
-assign led2 = vid_en;
-assign led3 = d_rw;
-assign led4 = md_en;
-assign led5 = vid80;
-assign led6 = an3;
-
-assign md_en = en80;
-assign d_rw = ~rw80;
-
-assign d = d_rw ? 8'bz : dout;
-
-logic [7:0] dout;
-logic [7:0] row;
+logic pras_n;
+logic q3;
+logic rw80;
+logic en80_n;
+logic rw;
+logic phi0;
+logic phi1;
+logic clk14m;
+logic [15:0] ad;
+logic [7:0] ad0;
 
 always_ff@(negedge pras_n) begin
-    row <= a;
+    ad0[7:0] <= ra;
 end
 
-assign ra_en = 0;
-assign vid_en = 1;
-
-logic [15:0] addr;
-logic [7:0] din;
 always_ff@(negedge q3) begin
-    addr[0] <= row[0];
-    addr[1] <= row[1];
-    addr[2] <= row[2];
-    addr[3] <= row[3];
-    addr[4] <= row[4];
-    addr[5] <= row[5];
-    addr[6] <= a[1];
-    addr[7] <= row[6];
-    addr[8] <= row[7];
-    addr[9] <= a[0];
-    addr[10] <= a[2];
-    addr[11] <= a[3];
-    addr[12] <= a[4];
-    addr[13] <= a[5];
-    addr[14] <= a[6];
-    addr[15] <= a[7];
-    din <= d;
+    ad[15:8] <= ra;
+    ad[7:0] <= ad0;
 end
 
-Gowin_RAM16S sram (
-    .dout(dout), //output [7:0] dout
-    .wre(~rw80), //input wre
-    .ad(addr[9:0]), //input [9:0] ad
-    .di(din), //input [7:0] di
-    .clk(q3) //input clk
-);
+assign pras_n = y[0];
+assign q3 = y[1];
+assign rw80 = y[2];
+assign en80_n = y[3];
+assign rw = y[4];
+assign phi0 = y[5];
+assign phi1 = y[6];
+assign clk14m = y[7];
 
 endmodule
 

@@ -1,0 +1,19 @@
+-d /Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/impl/gwsynthesis/IIeAux1.vg
+-p GW1NR-9C-QFN88P-6
+-pn GW1NR-LV9QN88PC6/I5
+-cst /Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/src/iieAux1.cst
+-cfg /Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/impl/pnr/device.cfg
+-sdc /Users/ushicow/Projects/IIeAuxSlot/IIeAux/Gowin/src/IIeAux1.sdc
+-gao_crc 0100011111110100
+-bit
+-tr
+-ph
+-timing
+-cst_error
+-place_option 0
+-route_option 0
+-clock_route_order 0
+-correct_hold 1
+-route_maxfan 23
+-global_freq 50.000
+-rtl_gao

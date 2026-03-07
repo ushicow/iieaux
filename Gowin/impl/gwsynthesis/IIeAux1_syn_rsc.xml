@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="top" Register="24" Lut="2" T_Register="444(24)" T_Alu="16(0)" T_Lut="545(2)" T_Bsram="22(0)">
+ <SubModule name="gw_gao_inst_0" Register="420" Alu="16" Lut="543" Bsram="22" T_Register="420(420)" T_Alu="16(16)" T_Lut="543(543)" T_Bsram="22(22)"/>
+</Module>
