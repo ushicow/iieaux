@@ -5,10 +5,29 @@
     <AoCore index="0" sample_clock="sclk" trig_type="0" storage_depth="4096" window_num="1" capture_amount="4096" implementation="0" trigger_pos="100" module_name="top" force_trigger_by_falling_edge="false" capture_init_data_enabled="false">
         <SignalList>
             <Signal capture_enable="true">clk14m</Signal>
-            <Signal capture_enable="true">phi0</Signal>
-            <Signal capture_enable="true">phi1</Signal>
             <Signal capture_enable="true">q3</Signal>
             <Signal capture_enable="true">pras_n</Signal>
+            <Signal capture_enable="true">rw80</Signal>
+            <Bus capture_enable="true" name="d[7:0]">
+                <Signal>d[7]</Signal>
+                <Signal>d[6]</Signal>
+                <Signal>d[5]</Signal>
+                <Signal>d[4]</Signal>
+                <Signal>d[3]</Signal>
+                <Signal>d[2]</Signal>
+                <Signal>d[1]</Signal>
+                <Signal>d[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="ar[7:0]">
+                <Signal>ar[7]</Signal>
+                <Signal>ar[6]</Signal>
+                <Signal>ar[5]</Signal>
+                <Signal>ar[4]</Signal>
+                <Signal>ar[3]</Signal>
+                <Signal>ar[2]</Signal>
+                <Signal>ar[1]</Signal>
+                <Signal>ar[0]</Signal>
+            </Bus>
             <Bus capture_enable="true" name="addr[15:0]">
                 <Signal>addr[15]</Signal>
                 <Signal>addr[14]</Signal>
@@ -27,27 +46,6 @@
                 <Signal>addr[1]</Signal>
                 <Signal>addr[0]</Signal>
             </Bus>
-            <Bus capture_enable="true" name="md[7:0]" restorename="d[7:0]">
-                <Signal>d[7]</Signal>
-                <Signal>d[6]</Signal>
-                <Signal>d[5]</Signal>
-                <Signal>d[4]</Signal>
-                <Signal>d[3]</Signal>
-                <Signal>d[2]</Signal>
-                <Signal>d[1]</Signal>
-                <Signal>d[0]</Signal>
-            </Bus>
-            <Signal capture_enable="true">rw</Signal>
-            <Signal capture_enable="true">en80</Signal>
-            <Signal capture_enable="true">rw80</Signal>
-            <Signal capture_enable="true">sync</Signal>
-            <Signal capture_enable="true">gr</Signal>
-            <Signal capture_enable="true">vid80</Signal>
-            <Signal capture_enable="true">an3</Signal>
-            <Signal capture_enable="true">ra9</Signal>
-            <Signal capture_enable="true">ra10</Signal>
-            <Signal capture_enable="true">md_en</Signal>
-            <Signal capture_enable="true">d_rw</Signal>
             <Bus capture_enable="true" name="din[7:0]">
                 <Signal>din[7]</Signal>
                 <Signal>din[6]</Signal>
@@ -68,23 +66,9 @@
                 <Signal>dout[1]</Signal>
                 <Signal>dout[0]</Signal>
             </Bus>
-            <Bus capture_enable="true" name="a[7:0]">
-                <Signal>a[7]</Signal>
-                <Signal>a[6]</Signal>
-                <Signal>a[5]</Signal>
-                <Signal>a[4]</Signal>
-                <Signal>a[3]</Signal>
-                <Signal>a[2]</Signal>
-                <Signal>a[1]</Signal>
-                <Signal>a[0]</Signal>
-            </Bus>
         </SignalList>
         <Triggers>
-            <Trigger index="0">
-                <SignalList>
-                    <Signal>rw</Signal>
-                </SignalList>
-            </Trigger>
+            <Trigger index="0"/>
             <Trigger index="1">
                 <SignalList>
                     <Bus restorename="addr[15:0]">
@@ -107,16 +91,8 @@
                     </Bus>
                 </SignalList>
             </Trigger>
-            <Trigger index="2">
-                <SignalList>
-                    <Signal>c07x</Signal>
-                </SignalList>
-            </Trigger>
-            <Trigger index="3">
-                <SignalList>
-                    <Signal>en80</Signal>
-                </SignalList>
-            </Trigger>
+            <Trigger index="2"/>
+            <Trigger index="3"/>
             <Trigger index="4">
                 <SignalList>
                     <Signal>rw80</Signal>
@@ -135,10 +111,10 @@
             <Trigger index="15"/>
         </Triggers>
         <MatchUnits>
-            <MatchUnit index="0" enabled="1" match_type="2" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0" value1="0" trigger="0"/>
+            <MatchUnit index="0" enabled="0" match_type="2" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0" value1="0" trigger="0"/>
             <MatchUnit index="1" enabled="1" match_type="2" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0000010000000000" value1="0000000000000000" trigger="1"/>
-            <MatchUnit index="2" enabled="1" match_type="2" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0" value1="0" trigger="2"/>
-            <MatchUnit index="3" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0" value1="0" trigger="3"/>
+            <MatchUnit index="2" enabled="0" match_type="2" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0" value1="0" trigger="2"/>
+            <MatchUnit index="3" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0" value1="0" trigger="3"/>
             <MatchUnit index="4" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0" value1="0" trigger="4"/>
             <MatchUnit index="5" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
             <MatchUnit index="6" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
@@ -153,8 +129,8 @@
             <MatchUnit index="15" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
         </MatchUnits>
         <Expressions type="Dynamic" ex_implementation="0">
-            <Expression>M3</Expression>
+            <Expression>M1</Expression>
         </Expressions>
     </AoCore>
-    <GAO_ID>1110001101001110</GAO_ID>
+    <GAO_ID>1110000001011010</GAO_ID>
 </GAO_CONFIG>
