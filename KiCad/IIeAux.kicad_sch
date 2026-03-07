@@ -6,9 +6,10 @@
 	(paper "A4")
 	(title_block
 		(title "IIeAux")
-		(date "2025-05-05")
+		(date "2026-03-07")
 		(rev "1")
 		(company "nanja.info")
+		(comment 1 "fixed U1 direction")
 	)
 	(lib_symbols
 		(symbol "IIeAux:+3V3"
@@ -8099,7 +8100,7 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 43.18) (xy 162.56 43.18)
+			(xy 132.08 43.18) (xy 124.46 43.18)
 		)
 		(stroke
 			(width 0)
@@ -9829,7 +9830,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 43.18) (xy 162.56 44.45)
+			(xy 124.46 43.18) (xy 124.46 44.45)
 		)
 		(stroke
 			(width 0)
@@ -10129,16 +10130,6 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 43.18) (xy 132.08 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c8d260ae-05b6-4be0-8998-8854baeccffc")
-	)
-	(wire
-		(pts
 			(xy 92.71 55.88) (xy 91.44 55.88)
 		)
 		(stroke
@@ -10256,6 +10247,16 @@
 			(type default)
 		)
 		(uuid "ce0a7651-8d52-49c3-bd77-398a9cc2b08a")
+	)
+	(wire
+		(pts
+			(xy 160.02 43.18) (xy 157.48 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce8f6334-b150-4f02-8c5b-6df6860ce127")
 	)
 	(wire
 		(pts
@@ -12819,24 +12820,24 @@
 			)
 		)
 	)
-	(global_label "R{slash}W"
+	(global_label "R{slash}W80"
 		(shape input)
-		(at 130.81 43.18 180)
+		(at 160.02 43.18 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "62ef287f-60a1-4ad1-8411-77d9c7b384c2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 123.7729 43.18 0)
+			(at 169.4761 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -16323,7 +16324,8 @@
 	)
 	(symbol
 		(lib_id "IIeAux:GND")
-		(at 162.56 44.45 0)
+		(at 124.46 44.45 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16331,7 +16333,7 @@
 		(dnp no)
 		(uuid "2594cf89-6512-4746-99fa-391b294ae72d")
 		(property "Reference" "#PWR014"
-			(at 162.56 50.8 0)
+			(at 124.46 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16340,7 +16342,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 166.37 46.99 0)
+			(at 120.65 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16348,7 +16350,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 162.56 44.45 0)
+			(at 124.46 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16357,7 +16359,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 162.56 44.45 0)
+			(at 124.46 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16366,7 +16368,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 162.56 44.45 0)
+			(at 124.46 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17437,15 +17439,15 @@
 	(symbol
 		(lib_id "IIeAux:SN74LVC245AN")
 		(at 144.78 53.34 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "6cb53c2f-f575-4e24-9e1b-e953ab56b591")
 		(property "Reference" "U1"
-			(at 146.9233 33.02 0)
+			(at 142.6367 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17454,7 +17456,7 @@
 			)
 		)
 		(property "Value" "SN74LVC245AN"
-			(at 146.9233 35.56 0)
+			(at 142.6367 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17463,7 +17465,7 @@
 			)
 		)
 		(property "Footprint" "IIeAux:DIP-20_W7.62mm"
-			(at 167.64 69.85 0)
+			(at 121.92 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17472,7 +17474,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/ds/scas218x/scas218x.pdf"
-			(at 143.51 59.69 0)
+			(at 146.05 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
