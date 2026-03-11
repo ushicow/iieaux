@@ -7,10 +7,11 @@
 	(title_block
 		(title "IIeAux")
 		(date "2026-03-07")
-		(rev "1.0.2")
+		(rev "1.0.3")
 		(company "nanja.info")
 		(comment 1 "Apple IIe Aux Slot FPGA Card")
 		(comment 2 "80 Column Text")
+		(comment 3 "Input video signals")
 	)
 	(lib_symbols
 		(symbol "IIeAux:+3V3"
@@ -5082,12 +5083,6 @@
 		(uuid "3cffbf2d-e477-4172-b498-8ab71d6df79b")
 	)
 	(junction
-		(at 106.68 114.3)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3fb27a73-4e2f-4151-b625-8de2baddb164")
-	)
-	(junction
 		(at 180.34 149.86)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5104,18 +5099,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b7372502-6143-4e70-bc2f-fcc91d5083e6")
-	)
-	(junction
-		(at 106.68 116.84)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c3b29b47-5c71-49cf-bf6d-62c475c4cbdb")
-	)
-	(junction
-		(at 106.68 111.76)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e53e9f8e-573b-4422-9efb-9b9634f98258")
 	)
 	(junction
 		(at 217.17 142.24)
@@ -5142,10 +5125,6 @@
 	(no_connect
 		(at 78.74 100.33)
 		(uuid "1b8ea732-8740-4a1a-8004-c1121d30076d")
-	)
-	(no_connect
-		(at 41.91 90.17)
-		(uuid "2a166754-af1d-4eda-a1dc-6a2be094b30d")
 	)
 	(no_connect
 		(at 41.91 49.53)
@@ -5196,10 +5175,6 @@
 		(uuid "7f94170a-4e82-497d-a514-8fe274edb97b")
 	)
 	(no_connect
-		(at 41.91 36.83)
-		(uuid "82b8c7e0-7d92-4621-9632-38268b8fabe7")
-	)
-	(no_connect
 		(at 210.82 72.39)
 		(uuid "861fdd1b-ef5c-47b9-8e0b-c0048c238726")
 	)
@@ -5214,10 +5189,6 @@
 	(no_connect
 		(at 41.91 41.91)
 		(uuid "97ae51a8-01b6-4926-8a01-9ac57cb8c8ad")
-	)
-	(no_connect
-		(at 41.91 46.99)
-		(uuid "992c7d31-b4ab-4a49-8ecf-3410a6dbb2f1")
 	)
 	(no_connect
 		(at 210.82 92.71)
@@ -5238,10 +5209,6 @@
 	(no_connect
 		(at 210.82 41.91)
 		(uuid "a5bff0e0-b0be-4465-a820-8f08530f68f5")
-	)
-	(no_connect
-		(at 41.91 100.33)
-		(uuid "a94ccd1f-9d4a-45af-8fd0-1c6f4d5af9a7")
 	)
 	(no_connect
 		(at 210.82 95.25)
@@ -5653,6 +5620,16 @@
 	)
 	(wire
 		(pts
+			(xy 120.65 109.22) (xy 123.19 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3116bc95-1c75-4e80-afb5-47ca9295f331")
+	)
+	(wire
+		(pts
 			(xy 78.74 74.93) (xy 80.01 74.93)
 		)
 		(stroke
@@ -5843,16 +5820,6 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 116.84) (xy 106.68 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "49b5f9a9-3cf3-4d26-b4b2-4ac053b66a97")
-	)
-	(wire
-		(pts
 			(xy 40.64 59.69) (xy 41.91 59.69)
 		)
 		(stroke
@@ -5910,16 +5877,6 @@
 			(type default)
 		)
 		(uuid "54d4dcd7-bd8a-434c-99a1-a7090f799d66")
-	)
-	(wire
-		(pts
-			(xy 106.68 109.22) (xy 106.68 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5529f21c-66d8-4ff0-b06f-b9185d3be035")
 	)
 	(wire
 		(pts
@@ -6023,16 +5980,6 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 111.76) (xy 106.68 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "604e9b9f-c8d8-422b-be48-23d39c2db326")
-	)
-	(wire
-		(pts
 			(xy 262.89 46.99) (xy 261.62 46.99)
 		)
 		(stroke
@@ -6040,6 +5987,16 @@
 			(type default)
 		)
 		(uuid "60576e57-3e95-49fb-bbd7-f24b0c8af5a2")
+	)
+	(wire
+		(pts
+			(xy 120.65 111.76) (xy 123.19 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "612158a4-1cc5-4cd1-a420-ea5145c1552f")
 	)
 	(wire
 		(pts
@@ -6263,6 +6220,16 @@
 	)
 	(wire
 		(pts
+			(xy 120.65 114.3) (xy 123.19 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a6df2a8-9d13-4bfb-816a-ad5290649b80")
+	)
+	(wire
+		(pts
 			(xy 210.82 97.79) (xy 213.36 97.79)
 		)
 		(stroke
@@ -6423,16 +6390,6 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 114.3) (xy 106.68 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8cf4c3df-c1fe-464c-b437-d822cf756360")
-	)
-	(wire
-		(pts
 			(xy 78.74 85.09) (xy 80.01 85.09)
 		)
 		(stroke
@@ -6540,6 +6497,16 @@
 			(type default)
 		)
 		(uuid "997f88e2-ef84-4d79-97f7-3f66df8444b8")
+	)
+	(wire
+		(pts
+			(xy 120.65 116.84) (xy 123.19 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9eda33d9-7488-423e-a8b7-098b5fcfdeab")
 	)
 	(wire
 		(pts
@@ -7003,16 +6970,6 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 111.76) (xy 123.19 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6fe157f-396b-4377-8563-1244c09b700b")
-	)
-	(wire
-		(pts
 			(xy 78.74 34.29) (xy 80.01 34.29)
 		)
 		(stroke
@@ -7233,26 +7190,6 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 116.84) (xy 123.19 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f21d295c-3ac1-407c-93ec-85f744d0d611")
-	)
-	(wire
-		(pts
-			(xy 106.68 114.3) (xy 123.19 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f3dc1017-3cb0-4041-a314-4df711d343f0")
-	)
-	(wire
-		(pts
 			(xy 120.65 93.98) (xy 120.65 96.52)
 		)
 		(stroke
@@ -7350,16 +7287,6 @@
 			(type default)
 		)
 		(uuid "fa6055b8-506a-4ec9-b79e-74ff81080a03")
-	)
-	(wire
-		(pts
-			(xy 106.68 109.22) (xy 123.19 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fa633055-8c32-41fa-ae47-70f962ce10cc")
 	)
 	(wire
 		(pts
@@ -8025,6 +7952,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SYNC"
+		(shape input)
+		(at 120.65 116.84 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "349d6123-4274-4804-8d1d-b58d92cc7e84")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 112.7662 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -9063,6 +9012,28 @@
 			)
 		)
 	)
+	(global_label "SEROUT"
+		(shape input)
+		(at 120.65 114.3 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "93a6331f-5015-49a8-a9a9-bc460b31fdcd")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 110.4077 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "MD6"
 		(shape input)
 		(at 40.64 72.39 180)
@@ -9767,6 +9738,28 @@
 			)
 		)
 	)
+	(global_label "WNDW"
+		(shape input)
+		(at 120.65 109.22 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e22a3538-9926-4812-8a72-6154fed88bcc")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 112.1615 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "VID4"
 		(shape input)
 		(at 40.64 85.09 180)
@@ -9873,6 +9866,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "CLRGAT"
+		(shape input)
+		(at 120.65 111.76 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ea64779c-5719-4fdc-9bf4-bc08b22bc2b0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 110.7705 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -10281,72 +10296,6 @@
 			(project "IIeAux"
 				(path "/9f1db0d4-0fbb-436a-b3be-9c0e5dc61ef0"
 					(reference "#PWR028")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "IIeAux:GND")
-		(at 106.68 123.19 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "13850d60-1cdb-4a08-8628-a9c25fb2a29d")
-		(property "Reference" "#PWR07"
-			(at 106.68 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 106.68 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 106.68 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 106.68 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 106.68 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "aa427b5e-2eef-4772-928b-e4e7bff36420")
-		)
-		(instances
-			(project "IIeAux"
-				(path "/9f1db0d4-0fbb-436a-b3be-9c0e5dc61ef0"
-					(reference "#PWR07")
 					(unit 1)
 				)
 			)
