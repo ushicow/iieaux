@@ -2,7 +2,7 @@
 <GAO_CONFIG>
     <Version>3.0</Version>
     <Mode>Standard</Mode>
-    <AoCore index="0" sample_clock="clk14m" trig_type="0" storage_depth="8192" window_num="1" capture_amount="8192" implementation="0" trigger_pos="100" module_name="top" force_trigger_by_falling_edge="false" capture_init_data_enabled="false">
+    <AoCore index="0" sample_clock="sclk" trig_type="0" storage_depth="8192" window_num="1" capture_amount="8192" implementation="0" trigger_pos="100" module_name="top" force_trigger_by_falling_edge="false" capture_init_data_enabled="true">
         <SignalList>
             <Signal capture_enable="true">clk14m</Signal>
             <Signal capture_enable="true">sync</Signal>
@@ -32,8 +32,11 @@
                 <Signal>pixel[1]</Signal>
                 <Signal>pixel[0]</Signal>
             </Bus>
-            <Signal capture_enable="true">rgb_hs</Signal>
-            <Signal capture_enable="true">rgb_vs</Signal>
+            <Signal capture_enable="true">vga_serial</Signal>
+            <Signal capture_enable="true">vga_clk</Signal>
+            <Signal capture_enable="true">vga_vs</Signal>
+            <Signal capture_enable="true">vga_hs</Signal>
+            <Signal capture_enable="true">vga_de</Signal>
             <Bus capture_enable="false" name="ar[7:0]">
                 <Signal>ar[7]</Signal>
                 <Signal>ar[6]</Signal>
@@ -194,5 +197,5 @@
             <Expression>M0</Expression>
         </Expressions>
     </AoCore>
-    <GAO_ID>1011111010001111</GAO_ID>
+    <GAO_ID>1110000101111100</GAO_ID>
 </GAO_CONFIG>
