@@ -2,7 +2,7 @@
 //All rights reserved.
 //File Title: Post-PnR Verilog Simulation Model file
 //Tool Version: V1.9.12.01
-//Created Time: Sat Mar 14 16:41:30 2026
+//Created Time: Mon Mar 23 14:04:41 2026
 
 `timescale 100 ps/100 ps
 module Scaler_Lite_Up_Top(
@@ -58,12 +58,6 @@ wire \scaler_core_up_inst/frame_rst ;
 wire \scaler_core_up_inst/I_vin_ref_de_d1 ;
 wire \scaler_core_up_inst/I_vin_ref_de_d2 ;
 wire [4:0] \scaler_core_up_inst/vinvs_sysclk_dn ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_4 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n387_4 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n388_4 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n389_4 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n390_4 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n391_4 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_4 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n393_4 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n394_4 ;
@@ -82,15 +76,21 @@ wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n406_4 
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n407_4 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n408_4 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n409_4 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n410_4 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n411_4 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n412_4 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n413_4 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n414_4 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n415_4 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/fstline_dotcnt_13_8 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n259_7 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n257_7 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n255_7 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n253_7 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n251_7 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n249_7 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n247_7 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n203_7 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n201_7 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n199_7 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n197_7 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n206_7 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n204_7 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n202_7 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n200_7 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n161_7 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n123_7 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n121_7 ;
@@ -109,17 +109,17 @@ wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n58_7 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n57_7 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n56_7 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n176_6 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_5 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_6 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_5 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_6 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/fstline_dotcnt_13_9 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/fstline_dotcnt_13_10 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outline_totalcnt_12_9 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n260_8 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n258_8 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n254_8 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n252_8 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n248_8 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n204_8 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n202_8 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n198_8 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n207_8 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n205_8 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n201_8 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n124_8 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n122_8 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n120_8 ;
@@ -135,23 +135,23 @@ wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n59_8 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n56_8 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n176_7 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n176_8 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_7 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_8 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_9 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_7 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_8 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_9 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/fstline_dotcnt_13_11 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/fstline_dotcnt_13_12 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/fstline_dotcnt_13_13 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n250_9 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n200_9 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n256_9 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n203_9 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n61_9 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n58_9 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n176_9 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n176_10 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n124_10 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n200_11 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n204_10 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n250_11 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n254_10 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n203_11 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n207_10 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n256_11 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n260_10 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n58_11 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n57_10 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n67_10 ;
@@ -167,18 +167,18 @@ wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n120_10
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n122_10 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n125_9 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n126_9 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n198_14 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n201_14 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_9_14 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n200_14 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n202_11 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n205_10 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n206_10 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n248_11 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n203_14 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n205_11 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n208_10 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n209_10 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n254_11 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_9_14 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n250_14 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n252_11 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n255_10 ;
-wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n256_10 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n256_14 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n258_11 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n261_10 ;
+wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n262_10 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_en ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data0_0_3 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data0_1_3 ;
@@ -202,8 +202,8 @@ wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_da
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data2_5_3 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data2_6_3 ;
 wire \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_7_7 ;
-wire [1:0] \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn ;
-wire [1:0] \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn ;
+wire [4:0] \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn ;
+wire [4:0] \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn ;
 wire [13:0] \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/fstline_dotcnt ;
 wire [12:0] \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outline_totalcnt ;
 wire [1:0] \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt ;
@@ -285,198 +285,198 @@ DFFC \scaler_core_up_inst/vinvs_sysclk_dn_4_s0  (
 	.Q(\scaler_core_up_inst/vinvs_sysclk_dn [4])
 );
 defparam \scaler_core_up_inst/vinvs_sysclk_dn_4_s0 .INIT=1'b0;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_s1  (
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_s1  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data0 [8]),
 	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata0 [7]),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_5 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_6 ),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_4 )
-);
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_s1 .INIT=16'hCCCA;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n387_s1  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data0 [7]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata0 [6]),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_5 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_6 ),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n387_4 )
-);
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n387_s1 .INIT=16'hCCCA;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n388_s1  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data0 [6]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata0 [5]),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_5 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_6 ),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n388_4 )
-);
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n388_s1 .INIT=16'hCCCA;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n389_s1  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data0 [5]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata0 [4]),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_5 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_6 ),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n389_4 )
-);
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n389_s1 .INIT=16'hCCCA;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n390_s1  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data0 [4]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata0 [3]),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_5 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_6 ),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n390_4 )
-);
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n390_s1 .INIT=16'hCCCA;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n391_s1  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data0 [3]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata0 [2]),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_5 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_6 ),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n391_4 )
-);
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n391_s1 .INIT=16'hCCCA;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_s1  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data0 [2]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata0 [1]),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_5 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_6 ),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_5 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_6 ),
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_4 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_s1 .INIT=16'hCCCA;
 LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n393_s1  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data0 [1]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata0 [0]),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_5 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_6 ),
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data0 [7]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata0 [6]),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_5 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_6 ),
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n393_4 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n393_s1 .INIT=16'hCCCA;
 LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n394_s1  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data1 [8]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata1 [7]),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_5 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_6 ),
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data0 [6]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata0 [5]),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_5 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_6 ),
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n394_4 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n394_s1 .INIT=16'hCCCA;
 LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n395_s1  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data1 [7]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata1 [6]),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_5 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_6 ),
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data0 [5]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata0 [4]),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_5 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_6 ),
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n395_4 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n395_s1 .INIT=16'hCCCA;
 LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n396_s1  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data1 [6]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata1 [5]),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_5 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_6 ),
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data0 [4]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata0 [3]),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_5 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_6 ),
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n396_4 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n396_s1 .INIT=16'hCCCA;
 LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n397_s1  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data1 [5]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata1 [4]),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_5 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_6 ),
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data0 [3]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata0 [2]),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_5 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_6 ),
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n397_4 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n397_s1 .INIT=16'hCCCA;
 LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n398_s1  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data1 [4]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata1 [3]),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_5 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_6 ),
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data0 [2]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata0 [1]),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_5 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_6 ),
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n398_4 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n398_s1 .INIT=16'hCCCA;
 LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n399_s1  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data1 [3]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata1 [2]),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_5 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_6 ),
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data0 [1]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata0 [0]),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_5 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_6 ),
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n399_4 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n399_s1 .INIT=16'hCCCA;
 LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n400_s1  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data1 [2]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata1 [1]),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_5 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_6 ),
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data1 [8]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata1 [7]),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_5 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_6 ),
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n400_4 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n400_s1 .INIT=16'hCCCA;
 LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n401_s1  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data1 [1]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata1 [0]),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_5 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_6 ),
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data1 [7]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata1 [6]),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_5 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_6 ),
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n401_4 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n401_s1 .INIT=16'hCCCA;
 LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n402_s1  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data2 [8]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata2 [7]),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_5 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_6 ),
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data1 [6]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata1 [5]),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_5 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_6 ),
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n402_4 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n402_s1 .INIT=16'hCCCA;
 LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n403_s1  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data2 [7]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata2 [6]),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_5 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_6 ),
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data1 [5]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata1 [4]),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_5 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_6 ),
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n403_4 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n403_s1 .INIT=16'hCCCA;
 LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n404_s1  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data2 [6]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata2 [5]),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_5 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_6 ),
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data1 [4]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata1 [3]),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_5 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_6 ),
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n404_4 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n404_s1 .INIT=16'hCCCA;
 LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n405_s1  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data2 [5]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata2 [4]),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_5 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_6 ),
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data1 [3]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata1 [2]),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_5 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_6 ),
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n405_4 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n405_s1 .INIT=16'hCCCA;
 LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n406_s1  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data2 [4]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata2 [3]),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_5 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_6 ),
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data1 [2]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata1 [1]),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_5 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_6 ),
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n406_4 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n406_s1 .INIT=16'hCCCA;
 LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n407_s1  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data2 [3]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata2 [2]),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_5 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_6 ),
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data1 [1]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata1 [0]),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_5 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_6 ),
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n407_4 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n407_s1 .INIT=16'hCCCA;
 LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n408_s1  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data2 [2]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata2 [1]),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_5 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_6 ),
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data2 [8]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata2 [7]),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_5 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_6 ),
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n408_4 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n408_s1 .INIT=16'hCCCA;
 LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n409_s1  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data2 [1]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata2 [0]),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_5 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_6 ),
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data2 [7]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata2 [6]),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_5 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_6 ),
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n409_4 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n409_s1 .INIT=16'hCCCA;
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n410_s1  (
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data2 [6]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata2 [5]),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_5 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_6 ),
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n410_4 )
+);
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n410_s1 .INIT=16'hCCCA;
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n411_s1  (
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data2 [5]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata2 [4]),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_5 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_6 ),
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n411_4 )
+);
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n411_s1 .INIT=16'hCCCA;
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n412_s1  (
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data2 [4]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata2 [3]),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_5 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_6 ),
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n412_4 )
+);
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n412_s1 .INIT=16'hCCCA;
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n413_s1  (
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data2 [3]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata2 [2]),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_5 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_6 ),
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n413_4 )
+);
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n413_s1 .INIT=16'hCCCA;
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n414_s1  (
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data2 [2]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata2 [1]),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_5 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_6 ),
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n414_4 )
+);
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n414_s1 .INIT=16'hCCCA;
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n415_s1  (
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/sum1_data2 [1]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rddata2 [0]),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_5 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_6 ),
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n415_4 )
+);
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n415_s1 .INIT=16'hCCCA;
 LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/fstline_dotcnt_13_s3  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/fstline_dotcnt_13_9 ),
 	.I1(I_buf_fstline_rdy),
@@ -485,70 +485,70 @@ LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/fstline
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/fstline_dotcnt_13_8 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/fstline_dotcnt_13_s3 .INIT=16'hFF40;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n253_s2  (
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n259_s2  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [2]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n254_8 ),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n260_8 ),
 	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt_0_11 ),
 	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [3]),
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n259_7 )
+);
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n259_s2 .INIT=16'h0708;
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n257_s2  (
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [4]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n258_8 ),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt_0_11 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [5]),
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n257_7 )
+);
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n257_s2 .INIT=16'h0708;
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n255_s2  (
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [6]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n256_11 ),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt_0_11 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [7]),
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n255_7 )
+);
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n255_s2 .INIT=16'h0708;
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n253_s2  (
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [8]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n254_8 ),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt_0_11 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [9]),
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n253_7 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n253_s2 .INIT=16'h0708;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n251_s2  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [4]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n252_8 ),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt_0_11 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [5]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n251_7 )
-);
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n251_s2 .INIT=16'h0708;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n249_s2  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [6]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n250_11 ),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt_0_11 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [7]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n249_7 )
-);
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n249_s2 .INIT=16'h0708;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n247_s2  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [8]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n248_8 ),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt_0_11 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [9]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n247_7 )
-);
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n247_s2 .INIT=16'h0708;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n203_s2  (
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n206_s2  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [2]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n204_8 ),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n207_8 ),
 	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt_0_11 ),
 	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [3]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n203_7 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n206_7 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n203_s2 .INIT=16'h0708;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n201_s2  (
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n206_s2 .INIT=16'h0708;
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n204_s2  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [4]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n202_8 ),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n205_8 ),
 	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt_0_11 ),
 	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [5]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n201_7 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n204_7 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n201_s2 .INIT=16'h0708;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n199_s2  (
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n204_s2 .INIT=16'h0708;
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n202_s2  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [6]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n200_11 ),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n203_11 ),
 	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt_0_11 ),
 	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [7]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n199_7 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n202_7 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n199_s2 .INIT=16'h0708;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n197_s2  (
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n202_s2 .INIT=16'h0708;
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n200_s2  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [8]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n198_8 ),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n201_8 ),
 	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt_0_11 ),
 	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [9]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n197_7 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n200_7 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n197_s2 .INIT=16'h0708;
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n200_s2 .INIT=16'h0708;
 LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n161_s2  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outline_totalcnt_12_9 ),
 	.I1(\scaler_core_up_inst/frame_rst ),
@@ -693,20 +693,20 @@ LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n176_s1
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n176_6 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n176_s1 .INIT=16'hF222;
-LUT2 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_s2  (
+LUT2 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_s2  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt [0]),
 	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt [1]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_5 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_5 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_s2 .INIT=4'h1;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_s3  (
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_s2 .INIT=4'h1;
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_s3  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n117_8 ),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_7 ),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_8 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_9 ),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_6 )
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_7 ),
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_8 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_9 ),
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_6 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_s3 .INIT=16'h8000;
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_s3 .INIT=16'h8000;
 LUT3 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/fstline_dotcnt_13_s4  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/fstline_dotcnt_13_11 ),
 	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/fstline_dotcnt_13_12 ),
@@ -728,50 +728,50 @@ LUT2 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outline
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outline_totalcnt_12_9 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outline_totalcnt_12_s4 .INIT=4'h4;
-LUT2 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n254_s3  (
+LUT2 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n260_s3  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [1]),
 	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [0]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n254_8 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n260_8 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n254_s3 .INIT=4'h8;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n252_s3  (
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n260_s3 .INIT=4'h8;
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n258_s3  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [1]),
 	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [0]),
 	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [2]),
 	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [3]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n252_8 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n258_8 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n252_s3 .INIT=16'h8000;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n248_s3  (
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n258_s3 .INIT=16'h8000;
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n254_s3  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [6]),
 	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [7]),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n252_8 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n250_9 ),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n248_8 )
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n258_8 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n256_9 ),
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n254_8 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n248_s3 .INIT=16'h8000;
-LUT2 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n204_s3  (
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n254_s3 .INIT=16'h8000;
+LUT2 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n207_s3  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [1]),
 	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [0]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n204_8 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n207_8 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n204_s3 .INIT=4'h8;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n202_s3  (
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n207_s3 .INIT=4'h8;
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n205_s3  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [1]),
 	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [0]),
 	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [2]),
 	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [3]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n202_8 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n205_8 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n202_s3 .INIT=16'h8000;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n198_s3  (
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n205_s3 .INIT=16'h8000;
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n201_s3  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [6]),
 	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [7]),
-	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n202_8 ),
-	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n200_9 ),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n198_8 )
+	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n205_8 ),
+	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n203_9 ),
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n201_8 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n198_s3 .INIT=16'h8000;
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n201_s3 .INIT=16'h8000;
 LUT2 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n124_s3  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outline_totalcnt [0]),
 	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outline_totalcnt [1]),
@@ -876,28 +876,28 @@ LUT2 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n176_s3
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n176_8 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n176_s3 .INIT=4'h4;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_s4  (
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_s4  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outline_totalcnt [2]),
 	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outline_totalcnt [3]),
 	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outline_totalcnt [4]),
 	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outline_totalcnt [5]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_7 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_7 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_s4 .INIT=16'h0100;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_s5  (
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_s4 .INIT=16'h0100;
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_s5  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outline_totalcnt [9]),
 	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outline_totalcnt [10]),
 	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outline_totalcnt [11]),
 	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outline_totalcnt [12]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_8 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_8 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_s5 .INIT=16'h0001;
-LUT2 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_s6  (
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_s5 .INIT=16'h0001;
+LUT2 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_s6  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outline_totalcnt [0]),
 	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outline_totalcnt [1]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_9 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_9 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_s6 .INIT=4'h1;
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_s6 .INIT=4'h1;
 LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/fstline_dotcnt_13_s6  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/fstline_dotcnt [0]),
 	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/fstline_dotcnt [1]),
@@ -921,18 +921,18 @@ LUT3 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/fstline
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/fstline_dotcnt_13_13 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/fstline_dotcnt_13_s8 .INIT=8'hE0;
-LUT2 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n250_s4  (
+LUT2 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n256_s4  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [4]),
 	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [5]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n250_9 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n256_9 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n250_s4 .INIT=4'h8;
-LUT2 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n200_s4  (
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n256_s4 .INIT=4'h8;
+LUT2 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n203_s4  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [4]),
 	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [5]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n200_9 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n203_9 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n200_s4 .INIT=4'h8;
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n203_s4 .INIT=4'h8;
 LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n61_s4  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/fstline_dotcnt [4]),
 	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/fstline_dotcnt [5]),
@@ -969,36 +969,36 @@ LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n124_s4
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n124_10 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n124_s4 .INIT=16'h1444;
-LUT3 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n200_s5  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n202_8 ),
+LUT3 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n203_s5  (
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n205_8 ),
 	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [4]),
 	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [5]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n200_11 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n203_11 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n200_s5 .INIT=8'h80;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n204_s4  (
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n203_s5 .INIT=8'h80;
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n207_s4  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt_0_11 ),
 	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [2]),
 	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [1]),
 	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [0]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n204_10 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n207_10 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n204_s4 .INIT=16'h1444;
-LUT3 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n250_s5  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n252_8 ),
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n207_s4 .INIT=16'h1444;
+LUT3 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n256_s5  (
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n258_8 ),
 	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [4]),
 	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [5]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n250_11 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n256_11 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n250_s5 .INIT=8'h80;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n254_s4  (
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n256_s5 .INIT=8'h80;
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n260_s4  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt_0_11 ),
 	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [2]),
 	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [1]),
 	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [0]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n254_10 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n260_10 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n254_s4 .INIT=16'h1444;
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n260_s4 .INIT=16'h1444;
 LUT3 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n58_s5  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/fstline_dotcnt [8]),
 	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/fstline_dotcnt [9]),
@@ -1115,96 +1115,96 @@ LUT3 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n126_s3
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n126_9 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n126_s3 .INIT=8'h45;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n198_s5  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n198_8 ),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn [1]),
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n201_s5  (
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n201_8 ),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn [4]),
 	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt_0_11 ),
 	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [8]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n198_14 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n201_14 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n198_s5 .INIT=16'h0708;
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n201_s5 .INIT=16'h0708;
 LUT2 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_9_s4  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt_0_11 ),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn [1]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn [4]),
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_9_14 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_9_s4 .INIT=4'hE;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n200_s7  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn [1]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n200_11 ),
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n203_s7  (
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn [4]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n203_11 ),
 	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt_0_11 ),
 	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [6]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n200_14 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n203_14 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n200_s7 .INIT=16'h0708;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n202_s5  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn [1]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n202_8 ),
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n203_s7 .INIT=16'h0708;
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n205_s5  (
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn [4]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n205_8 ),
 	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt_0_11 ),
 	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [4]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n202_11 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n205_11 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n202_s5 .INIT=16'h0708;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n205_s4  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn [1]),
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n205_s5 .INIT=16'h0708;
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n208_s4  (
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn [4]),
 	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [0]),
 	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt_0_11 ),
 	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [1]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n205_10 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n208_10 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n205_s4 .INIT=16'h0708;
-LUT3 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n206_s4  (
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n208_s4 .INIT=16'h0708;
+LUT3 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n209_s4  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt_0_11 ),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn [1]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn [4]),
 	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [0]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n206_10 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n209_10 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n206_s4 .INIT=8'h14;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n248_s5  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n248_8 ),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn [1]),
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n209_s4 .INIT=8'h14;
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n254_s5  (
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n254_8 ),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn [4]),
 	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt_0_11 ),
 	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [8]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n248_11 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n254_11 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n248_s5 .INIT=16'h0708;
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n254_s5 .INIT=16'h0708;
 LUT2 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_9_s4  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt_0_11 ),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn [1]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn [4]),
 	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_9_14 )
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_9_s4 .INIT=4'hE;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n250_s7  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn [1]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n250_11 ),
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n256_s7  (
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn [4]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n256_11 ),
 	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt_0_11 ),
 	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [6]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n250_14 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n256_14 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n250_s7 .INIT=16'h0708;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n252_s5  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn [1]),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n252_8 ),
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n256_s7 .INIT=16'h0708;
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n258_s5  (
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn [4]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n258_8 ),
 	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt_0_11 ),
 	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [4]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n252_11 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n258_11 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n252_s5 .INIT=16'h0708;
-LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n255_s4  (
-	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn [1]),
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n258_s5 .INIT=16'h0708;
+LUT4 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n261_s4  (
+	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn [4]),
 	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [0]),
 	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt_0_11 ),
 	.I3(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [1]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n255_10 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n261_10 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n255_s4 .INIT=16'h0708;
-LUT3 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n256_s4  (
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n261_s4 .INIT=16'h0708;
+LUT3 \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n262_s4  (
 	.I0(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt_0_11 ),
-	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn [1]),
+	.I1(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn [4]),
 	.I2(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [0]),
-	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n256_10 )
+	.F(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n262_10 )
 );
-defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n256_s4 .INIT=8'h14;
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n262_s4 .INIT=8'h14;
 DFFC \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_s0  (
 	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n176_6 ),
 	.CLK(I_sysclk),
@@ -1212,6 +1212,27 @@ DFFC \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_rea
 	.Q(O_vin_de_req)
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_s0 .INIT=1'b0;
+DFFC \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn_4_s0  (
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn [3]),
+	.CLK(I_sysclk),
+	.CLEAR(I_reset),
+	.Q(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn [4])
+);
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn_4_s0 .INIT=1'b0;
+DFFC \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn_3_s0  (
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn [2]),
+	.CLK(I_sysclk),
+	.CLEAR(I_reset),
+	.Q(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn [3])
+);
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn_3_s0 .INIT=1'b0;
+DFFC \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn_2_s0  (
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn [1]),
+	.CLK(I_sysclk),
+	.CLEAR(I_reset),
+	.Q(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn [2])
+);
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn_2_s0 .INIT=1'b0;
 DFFC \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn_1_s0  (
 	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn [0]),
 	.CLK(I_sysclk),
@@ -1226,6 +1247,27 @@ DFFC \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_rea
 	.Q(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn [0])
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn_0_s0 .INIT=1'b0;
+DFFC \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn_4_s0  (
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn [3]),
+	.CLK(I_sysclk),
+	.CLEAR(I_reset),
+	.Q(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn [4])
+);
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn_4_s0 .INIT=1'b0;
+DFFC \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn_3_s0  (
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn [2]),
+	.CLK(I_sysclk),
+	.CLEAR(I_reset),
+	.Q(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn [3])
+);
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn_3_s0 .INIT=1'b0;
+DFFC \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn_2_s0  (
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn [1]),
+	.CLK(I_sysclk),
+	.CLEAR(I_reset),
+	.Q(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn [2])
+);
+defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn_2_s0 .INIT=1'b0;
 DFFC \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn_1_s0  (
 	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn [0]),
 	.CLK(I_sysclk),
@@ -1241,7 +1283,7 @@ DFFC \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rde
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn_0_s0 .INIT=1'b0;
 DFFC \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_en_s0  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn [1]),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn [4]),
 	.CLK(I_sysclk),
 	.CLEAR(I_reset),
 	.Q(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_en )
@@ -1479,7 +1521,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlin
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt_1_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_9_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n197_7 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n200_7 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_9_14 ),
 	.CLEAR(I_reset),
@@ -1487,7 +1529,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wr
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_9_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_7_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n199_7 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n202_7 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_9_14 ),
 	.CLEAR(I_reset),
@@ -1495,7 +1537,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wr
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_7_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_5_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n201_7 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n204_7 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_9_14 ),
 	.CLEAR(I_reset),
@@ -1503,7 +1545,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wr
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_5_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_3_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n203_7 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n206_7 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_9_14 ),
 	.CLEAR(I_reset),
@@ -1511,7 +1553,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wr
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_3_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_2_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n204_10 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n207_10 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_9_14 ),
 	.CLEAR(I_reset),
@@ -1519,7 +1561,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wr
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_2_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_9_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n247_7 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n253_7 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_9_14 ),
 	.CLEAR(I_reset),
@@ -1527,7 +1569,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rd
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_9_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_7_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n249_7 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n255_7 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_9_14 ),
 	.CLEAR(I_reset),
@@ -1535,7 +1577,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rd
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_7_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_5_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n251_7 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n257_7 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_9_14 ),
 	.CLEAR(I_reset),
@@ -1543,7 +1585,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rd
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_5_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_3_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n253_7 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n259_7 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_9_14 ),
 	.CLEAR(I_reset),
@@ -1551,7 +1593,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rd
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_3_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_2_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n254_10 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n260_10 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_9_14 ),
 	.CLEAR(I_reset),
@@ -1559,7 +1601,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rd
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_2_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_7_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n386_4 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_4 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_7_7 ),
 	.CLEAR(I_reset),
@@ -1567,7 +1609,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_d
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_7_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_6_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n387_4 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n393_4 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_7_7 ),
 	.CLEAR(I_reset),
@@ -1575,7 +1617,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_d
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_6_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_5_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n388_4 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n394_4 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_7_7 ),
 	.CLEAR(I_reset),
@@ -1583,7 +1625,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_d
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_5_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_4_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n389_4 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n395_4 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_7_7 ),
 	.CLEAR(I_reset),
@@ -1591,7 +1633,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_d
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_4_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_3_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n390_4 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n396_4 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_7_7 ),
 	.CLEAR(I_reset),
@@ -1599,7 +1641,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_d
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_3_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_2_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n391_4 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n397_4 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_7_7 ),
 	.CLEAR(I_reset),
@@ -1607,7 +1649,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_d
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_2_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_1_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n392_4 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n398_4 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_7_7 ),
 	.CLEAR(I_reset),
@@ -1615,7 +1657,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_d
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_1_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_0_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n393_4 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n399_4 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_7_7 ),
 	.CLEAR(I_reset),
@@ -1623,7 +1665,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_d
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_0_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data1_7_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n394_4 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n400_4 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_7_7 ),
 	.CLEAR(I_reset),
@@ -1631,7 +1673,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_d
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data1_7_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data1_6_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n395_4 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n401_4 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_7_7 ),
 	.CLEAR(I_reset),
@@ -1639,7 +1681,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_d
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data1_6_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data1_5_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n396_4 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n402_4 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_7_7 ),
 	.CLEAR(I_reset),
@@ -1647,7 +1689,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_d
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data1_5_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data1_4_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n397_4 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n403_4 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_7_7 ),
 	.CLEAR(I_reset),
@@ -1655,7 +1697,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_d
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data1_4_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data1_3_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n398_4 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n404_4 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_7_7 ),
 	.CLEAR(I_reset),
@@ -1663,7 +1705,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_d
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data1_3_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data1_2_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n399_4 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n405_4 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_7_7 ),
 	.CLEAR(I_reset),
@@ -1671,7 +1713,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_d
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data1_2_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data1_1_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n400_4 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n406_4 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_7_7 ),
 	.CLEAR(I_reset),
@@ -1679,7 +1721,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_d
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data1_1_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data1_0_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n401_4 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n407_4 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_7_7 ),
 	.CLEAR(I_reset),
@@ -1687,7 +1729,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_d
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data1_0_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data2_7_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n402_4 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n408_4 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_7_7 ),
 	.CLEAR(I_reset),
@@ -1695,7 +1737,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_d
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data2_7_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data2_6_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n403_4 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n409_4 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_7_7 ),
 	.CLEAR(I_reset),
@@ -1703,7 +1745,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_d
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data2_6_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data2_5_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n404_4 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n410_4 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_7_7 ),
 	.CLEAR(I_reset),
@@ -1711,7 +1753,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_d
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data2_5_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data2_4_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n405_4 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n411_4 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_7_7 ),
 	.CLEAR(I_reset),
@@ -1719,7 +1761,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_d
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data2_4_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data2_3_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n406_4 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n412_4 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_7_7 ),
 	.CLEAR(I_reset),
@@ -1727,7 +1769,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_d
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data2_3_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data2_2_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n407_4 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n413_4 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_7_7 ),
 	.CLEAR(I_reset),
@@ -1735,7 +1777,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_d
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data2_2_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data2_1_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n408_4 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n414_4 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_7_7 ),
 	.CLEAR(I_reset),
@@ -1743,7 +1785,7 @@ DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_d
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data2_1_s1 .INIT=1'b0;
 DFFCE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data2_0_s1  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n409_4 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n415_4 ),
 	.CLK(I_sysclk),
 	.CE(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_data0_7_7 ),
 	.CLEAR(I_reset),
@@ -1759,70 +1801,70 @@ DFFPE \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlin
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/outlinecnt_0_s1 .INIT=1'b1;
 DFFC \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_8_s3  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n198_14 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n201_14 ),
 	.CLK(I_sysclk),
 	.CLEAR(I_reset),
 	.Q(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [8])
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_8_s3 .INIT=1'b0;
 DFFC \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_6_s3  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n200_14 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n203_14 ),
 	.CLK(I_sysclk),
 	.CLEAR(I_reset),
 	.Q(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [6])
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_6_s3 .INIT=1'b0;
 DFFC \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_4_s3  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n202_11 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n205_11 ),
 	.CLK(I_sysclk),
 	.CLEAR(I_reset),
 	.Q(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [4])
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_4_s3 .INIT=1'b0;
 DFFC \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_1_s3  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n205_10 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n208_10 ),
 	.CLK(I_sysclk),
 	.CLEAR(I_reset),
 	.Q(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [1])
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_1_s3 .INIT=1'b0;
 DFFC \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_0_s3  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n206_10 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n209_10 ),
 	.CLK(I_sysclk),
 	.CLEAR(I_reset),
 	.Q(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad [0])
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_wrad_0_s3 .INIT=1'b0;
 DFFC \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_8_s3  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n248_11 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n254_11 ),
 	.CLK(I_sysclk),
 	.CLEAR(I_reset),
 	.Q(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [8])
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_8_s3 .INIT=1'b0;
 DFFC \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_6_s3  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n250_14 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n256_14 ),
 	.CLK(I_sysclk),
 	.CLEAR(I_reset),
 	.Q(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [6])
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_6_s3 .INIT=1'b0;
 DFFC \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_4_s3  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n252_11 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n258_11 ),
 	.CLK(I_sysclk),
 	.CLEAR(I_reset),
 	.Q(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [4])
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_4_s3 .INIT=1'b0;
 DFFC \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_1_s3  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n255_10 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n261_10 ),
 	.CLK(I_sysclk),
 	.CLEAR(I_reset),
 	.Q(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [1])
 );
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_1_s3 .INIT=1'b0;
 DFFC \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad_0_s3  (
-	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n256_10 ),
+	.D(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/n262_10 ),
 	.CLK(I_sysclk),
 	.CLEAR(I_reset),
 	.Q(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/ram_rdad [0])
@@ -2050,10 +2092,10 @@ INV \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/vval_dat
 );
 SDPB \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/bram_inst/sdpb_inst_0  (
 	.CLKA(I_sysclk),
-	.CEA(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn [1]),
+	.CEA(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn [4]),
 	.RESETA(\scaler_core_up_inst/frame_rst ),
 	.CLKB(I_sysclk),
-	.CEB(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn [1]),
+	.CEB(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn [4]),
 	.RESETB(\scaler_core_up_inst/frame_rst ),
 	.OCE(VCC),
 	.BLKSELA({GND, GND, GND}),
@@ -2071,10 +2113,10 @@ defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/bra
 defparam \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/bram_inst/sdpb_inst_0 .BLK_SEL_1=3'b000;
 SDPB \scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/bram_inst/sdpb_inst_1  (
 	.CLKA(I_sysclk),
-	.CEA(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn [1]),
+	.CEA(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/buf_read_dn [4]),
 	.RESETA(\scaler_core_up_inst/frame_rst ),
 	.CLKB(I_sysclk),
-	.CEB(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn [1]),
+	.CEB(\scaler_core_up_inst/ver_calcdata_gen_inst/ver_calcdata_gen_24_inst/hor_rden_dn [4]),
 	.RESETB(\scaler_core_up_inst/frame_rst ),
 	.OCE(VCC),
 	.BLKSELA({GND, GND, GND}),

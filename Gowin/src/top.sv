@@ -1,8 +1,20 @@
+// ---------------------------------------------------------------------
+// File name         : top.sv
+// Module name       : top
+// Module Description: DVI video card for Apple IIe Aux Slot
+// Created by        : ushicow
+// ---------------------------------------------------------------------
+// Release history
+// VERSION |   Date      | AUTHOR  |    DESCRIPTION
+// --------------------------------------------------------------------
+//   1.0.0 | 2026/02/15  | ushicow |    initial
+//   1.0.1 | 2026/03/01  | ushicow | for 1st batch of PCB
+//   1.0.2 | 2026/03/07  | ushicow | 80 Column Text
+//   1.0.3 | 2026/03/11  | ushicow | DVI output test
+//   1.0.4 | 2026/03/15  | ushicow | VGA signal test
+//   1.0.5 | 2026z03z23  | ushicow | Frame Buffer
+// --------------------------------------------------------------------
 `default_nettype none
-// Apple IIe Aux Card
-// V1.0.2 2026.03.07 80 Colmun Text
-// V1.0.3 2026.03.08 Input video signals
-// V1.0.4 2026.03.14 Vesa VGA output test
 
 module top (
     inout wire [7:0] d,
@@ -19,16 +31,17 @@ module top (
     output wire       dvi_clk_n,
     output wire [2:0] dvi_data_p,
     output wire [2:0] dvi_data_n,
+	output wire [1:0] O_psram_ck,
+	output wire [1:0] O_psram_ck_n,
+	inout wire [1:0]  IO_psram_rwds,
+	inout wire [15:0] IO_psram_dq,
+	output wire [1:0] O_psram_reset_n,
+	output wire [1:0] O_psram_cs_n,
     input wire mclk
 );
 
-logic sclk;
-logic reset_n;
-Gowin_rPLL rpll(
-    .clkout(sclk), //output clkout
-    .lock(reset_n), //output lock
-    .clkin(clk14m) //input clkin
-);
+logic memory_clk;
+logic pll_lock;
 
 logic [7:0] row;
 logic [15:0] addr;
@@ -61,7 +74,7 @@ always_ff@(negedge q3) begin
     din <= d;
 end
 
-Gowin_RAM16S sram (
+Gowin_RAM16S u_sram (
     .dout(dout), //output [7:0] dout
     .wre(~rw80), //input wre
     .ad(addr[9:0]), //input [9:0] ad
@@ -69,154 +82,228 @@ Gowin_RAM16S sram (
     .clk(q3) //input clk
 );
 
-//parameter ACTIVE_PIXEL = 560;
-//parameter ACTIVE_LINE = 192;
-//parameter FPORCH_PIXEL = 107;
-parameter APPLE_SYNC = 56;
-//parameter SYNC_PIXEL = 56;
-//parameter BPORCH_PIXEL = 189;
-//parameter FPORCH_LINE = 40;
-//parameter SYNC_LINE = 4;
-//parameter BPORCH_LINE = 26;
 
-logic [7:0] rgb;
-assign rgb = serout ? 8'h00 : 8'hff;
-
-logic [9:0] pixel;
-logic [8:0] line;
-logic [9:0] count;
-logic rgb_vs;
-logic rgb_hs;
-always_ff@(posedge clk14m) begin
-    if (sync) begin
-        if (count == APPLE_SYNC) begin
-            rgb_vs <= 1;
-        end
-        pixel <= pixel + 1'b1;
-        count <= 0;
-        rgb_hs <= 1;
-    end else begin
-        count <= count + 1'b1;
-        rgb_hs <= 0;
-        if (pixel) begin
-            line <= line + 1'b1;
-        end
-        pixel <= 0;
-        if (count > APPLE_SYNC) begin
-            rgb_hs <= 1;
-            rgb_vs <= 0;
-            line <= 0;
-        end
-    end
-end
+// Apple II Video signals
+logic rgb_vs_n;         // RGB vertical sync, negative
+logic rgb_hs_n;         // RGB horizontal sync, negative
+logic rgb_de;           // RGB data enable
+logic [23:0] rgb_data;  // 24 bits RGB data
+Apple2_Video u_a2video (
+    .I_clk14m(clk14m),
+    .I_rst_n(reset_n),
+    .I_sync_n(sync),
+    .I_wndw_n(wndw),
+    .I_serout_n(serout),
+    .O_rgb_vs_n(rgb_vs_n),
+    .O_rgb_hs_n(rgb_hs_n),
+    .O_rgb_de(rgb_de),
+    .O_rgb_data(rgb_data)
+);
 
 
-//logic [7:0] r;
-//logic [7:0] g;
-//logic [7:0] b;
-//logic vin_vs_req;
-//logic vin_de_req;
-//logic buf_fstline_rdy;
-//Scaler_Lite_Up_Top scaler(
-//    .I_reset(reset_n), //input I_reset
-//    .I_sysclk(vga_clk), //input I_sysclk
-//    .I_vin_ref_vs(~rgb_vs), //input I_vin_ref_vs
-//    .I_vin_ref_de(~wndw), //input I_vin_ref_de
-//    .O_vin_vs_req(vin_vs_req), //output O_vin_vs_req
-//    .O_vin_de_req(vin_de_req), //output O_vin_de_req
-//    .I_buf_fstline_rdy(buf_fstline_rdy), //input I_buf_fstline_rdy
-//    .I_vin_data0_cpl(rgb), //input [7:0] I_vin_data0_cpl
-//    .I_vin_data1_cpl(rgb), //input [7:0] I_vin_data1_cpl
-//    .I_vin_data2_cpl(rgb), //input [7:0] I_vin_data2_cpl
-//    .O_vout0_data(r), //output [7:0] O_vout0_data
-//    .O_vout1_data(g), //output [7:0] O_vout1_data
-//    .O_vout2_data(b), //output [7:0] O_vout2_data
-//    .O_vout_vs(rgb2_vs), //output O_vout_vs
-//    .O_vout_de(rgb2_de) //output O_vout_de
-//);
+// VGA Video signals
+logic serial_clk;       // VGA serial clock
+logic vga_clk;          // VGA pixel clock
+logic vga_vs_n;         // VGA vertical sync, negative
+logic vga_hs_n;         // VGA horizontal sync, negative
+logic vga_de;           // VGA data enable
 
-// VESA 640 x 480, 75 fps, 31.5 MHz
-parameter ACTIVE_PIXEL = 640;
-parameter ACTIVE_LINE = 480;
-parameter FPORCH_PIXEL = ACTIVE_PIXEL + 16;
-parameter SYNC_PIXEL = FPORCH_PIXEL + 64;
-parameter BPORCH_PIXEL = SYNC_PIXEL + 120;
-parameter FPORCH_LINE = ACTIVE_LINE + 1;
-parameter SYNC_LINE = FPORCH_LINE + 3;
-parameter BPORCH_LINE = SYNC_LINE + 16;
-
-logic [9:0] hcount;
-logic [9:0] vcount;
-logic rgb2_de;
-logic rgb2_hs;
-logic rgb2_vs;
-always_ff@(posedge vga_clk, negedge reset_n) begin
-    if (!reset_n) begin
-        vcount <= 0;
-        hcount <= 0;
-    end else begin
-        if (hcount == FPORCH_PIXEL) begin
-            vga_hs <= 0;
-            if (vcount == FPORCH_LINE) begin
-                vga_vs <= 0;
-            end
-            if (vcount == SYNC_LINE) begin
-                vga_vs <= 1;
-            end
-            if (vcount == (BPORCH_LINE - 1)) begin
-                vcount <= 0;
-            end else begin
-                vcount <= vcount + 1'b1;
-            end
-        end
-        if (hcount == SYNC_PIXEL) begin
-            vga_hs <= 1;
-        end
-
-        if (hcount == (BPORCH_PIXEL - 1)) begin
-            hcount <= 0;
-        end else begin
-            hcount <= hcount + 1'b1;
-        end
-
-        if (vcount < ACTIVE_LINE & hcount < ACTIVE_PIXEL) begin
-            vga_de <= 1;
-        end else begin
-            vga_de <= 0;
-        end
-    end
-end
-
-assign rgb24 = vga_de ? 24'h550000 : 24'h0000ff;//{r,g,b}
-
-logic vga_serial;
-logic vga_clk;
-logic vga_vs;
-logic vga_hs;
-logic vga_de;
-logic [23:0] rgb24;
+logic reset_n;
 Gowin_rPLL_VGA u_vga_pll(
-    .clkout(vga_serial), //output clkout 157.5 MHz
-    .clkin(mclk) //input clkin 27 MHz
+    .clkout(serial_clk), //clkout 126 MHz
+    .lock(reset_n),      // plllock as reset
+    .clkin(mclk)         //clkin 27 MHz
 );
 
-Gowin_CLKDIV u_clkdiv(
-    .clkout(vga_clk), //output clkout 31.5 MHz
-    .hclkin(vga_serial), //input hclkin 157.5 MHz
-    .resetn(reset_n), //input resetn
-    .calib(1'b1) //input calib
+CLKDIV u_clkdiv
+(.RESETN(reset_n)
+,.HCLKIN(serial_clk)    //clk x5, 126 MHz
+,.CLKOUT(vga_clk)       //clk x1, 25.2 MHz
+,.CALIB (1'b1)
+);
+defparam u_clkdiv.DIV_MODE="5";
+defparam u_clkdiv.GSREN="false";
+
+VGA_Sync u_vga_sync(
+    .I_pxl_clk(vga_clk),
+    .I_rst_n(reset_n),
+    .O_vs_n(vga_vs_n),
+    .O_hs_n(vga_hs_n),
+    .O_de(vga_de)
 );
 
-DVI_TX_Top dvi (
+
+// Video frame buffer
+logic vout_den;
+logic [23:0] vout_data;
+Video_Frame_Buffer_Top u_vfb(
+    .I_rst_n(init_calib), //input I_rst_n
+    .I_dma_clk(dma_clk), //input I_dma_clk
+    .I_wr_halt(1'b0), //input [0:0] I_wr_halt
+    .I_rd_halt(1'b0), //input [0:0] I_rd_halt
+    .I_vin0_clk(clk14m), //input I_vin0_clk
+    .I_vin0_vs_n(rgb_vs_n), //input I_vin0_vs_n
+    .I_vin0_de(rgb_de), //input I_vin0_de
+    .I_vin0_data(rgb_data), //input [23:0] I_vin0_data
+    .O_vin0_fifo_full(), //output O_vin0_fifo_full
+    .I_vout0_clk(vga_clk), //input I_vout0_clk
+    .I_vout0_vs_n(~scl_vs_req), //input I_vout0_vs_n
+    .I_vout0_de(scl_de_req), //input I_vout0_de
+    .O_vout0_den(vout_den), //output O_vout0_den
+    .O_vout0_data(vout_data), //output [23:0] O_vout0_data
+    .O_vout0_fifo_empty(), //output O_vout0_fifo_empty
+    .O_cmd(cmd), //output O_cmd
+    .O_cmd_en(cmd_en), //output O_cmd_en
+    .O_addr(dma_addr), //output [20:0] O_addr
+    .O_wr_data(wr_data), //output [31:0] O_wr_data
+    .O_data_mask(data_mask), //output [3:0] O_data_mask
+    .I_rd_data_valid(rd_data_valid), //input I_rd_data_valid
+    .I_rd_data(rd_data), //input [31:0] I_rd_data
+    .I_init_calib(init_calib) //input I_init_calib
+);
+
+
+// PSRAM for Video Frame Buffer
+logic [20:0] dma_addr;
+logic [31:0] wr_data;
+logic [31:0] rd_data;
+logic [3:0] data_mask;
+logic rd_data_valid;
+logic cmd;
+logic cmd_en;
+logic init_calib;
+logic dma_clk;
+
+Gowin_rPLL u_pll(
+    .clkout(memory_clk), //output clkout 120 MHz
+    .lock(pll_lock), //output lock
+    .clkin(mclk) //input clkin            27 MHz
+);
+
+PSRAM_Memory_Interface_HS_Top u_psram(
+    .clk(mclk), //input clk
+    .memory_clk(memory_clk), //input memory_clk
+    .pll_lock(reset_n), //input pll_lock
+    .rst_n(1'b1), //input rst_n
+    .O_psram_ck(O_psram_ck), //output [0:0] O_psram_ck
+    .O_psram_ck_n(O_psram_ck_n), //output [0:0] O_psram_ck_n
+    .IO_psram_dq(IO_psram_dq), //inout [7:0] IO_psram_dq
+    .IO_psram_rwds(IO_psram_rwds), //inout [0:0] IO_psram_rwds
+    .O_psram_cs_n(O_psram_cs_n), //output [0:0] O_psram_cs_n
+    .O_psram_reset_n(O_psram_reset_n), //output [0:0] O_psram_reset_n
+    .wr_data(wr_data), //input [31:0] wr_data
+    .rd_data(rd_data), //output [31:0] rd_data
+    .rd_data_valid(rd_data_valid), //output rd_data_valid
+    .addr(dma_addr), //input [20:0] addr
+    .cmd(cmd), //input cmd
+    .cmd_en(cmd_en), //input cmd_en
+    .init_calib(init_calib), //output init_calib
+    .clk_out(dma_clk), //output clk_out
+    .data_mask(data_mask) //input [3:0] data_mask
+);
+
+
+// Scan doubler
+logic scl_vs_req;
+logic scl_de_req;
+logic [7:0] sclin_r;
+logic [7:0] sclin_g;
+logic [7:0] sclin_b;
+logic [7:0] sclout_r;
+logic [7:0] sclout_g;
+logic [7:0] sclout_b;
+logic sclout_vs;
+logic sclout_de;
+
+logic buf_fstline_rdy;
+logic [31:0] delay_cnt;
+//waiting for every frame buffer first line is ready
+always_ff@(posedge vga_clk or negedge reset_n)
+begin
+    if(!reset_n)
+        delay_cnt <= 32'd0;
+    else if(scl_vs_req)
+        delay_cnt <= 32'd0;
+    else if(delay_cnt >= 800*2)
+        delay_cnt <= delay_cnt;
+    else
+        delay_cnt <= delay_cnt + 1'b1;
+end
+
+always_ff@(posedge vga_clk or negedge reset_n)
+begin
+    if(!reset_n)
+        buf_fstline_rdy <= 1'd0;
+    else if(scl_vs_req)
+        buf_fstline_rdy <= 1'd0;
+    else if(delay_cnt >= 800*2)
+        buf_fstline_rdy <= 1'd1;
+    else
+        buf_fstline_rdy <= buf_fstline_rdy;
+end
+
+Scaler_Lite_Up_Top u_scaler(
+    .I_reset(~reset_n), //input I_reset
+    .I_sysclk(vga_clk), //input I_sysclk
+    .I_vin_ref_vs(~vga_vs_n), //input I_vin_ref_vs positive
+    .I_vin_ref_de(vga_de), //input I_vin_ref_de
+    .O_vin_vs_req(scl_vs_req), //output O_vin_vs_req positive
+    .O_vin_de_req(scl_de_req), //output O_vin_de_req
+    .I_buf_fstline_rdy(buf_fstline_rdy), //input I_buf_fstline_rdy
+    .I_vin_data0_cpl(sclin_r), //input [7:0] I_vin_data0_cpl
+    .I_vin_data1_cpl(sclin_g), //input [7:0] I_vin_data1_cpl
+    .I_vin_data2_cpl(sclin_b), //input [7:0] I_vin_data2_cpl
+    .O_vout0_data(sclout_r), //output [7:0] O_vout0_data
+    .O_vout1_data(sclout_g), //output [7:0] O_vout1_data
+    .O_vout2_data(sclout_b), //output [7:0] O_vout2_data
+    .O_vout_vs(sclout_vs), //output O_vout_vs
+    .O_vout_de(sclout_de) //output O_vout_de
+);
+
+assign sclin_r = vout_data[23:16];
+assign sclin_g = vout_data[15:8];
+assign sclin_b = vout_data[7:0];
+
+
+// DVI output
+logic dvi_hs_n;
+logic dvi_vs_n;
+logic dvi_de;
+logic [23:0] dvi_data;  // VGA RGB data
+
+localparam N = 16; //delay N clocks
+                        
+logic [N-1:0] Pout_hs_dn;
+logic [N-1:0] Pout_vs_dn;
+logic [N-1:0] Pout_de_dn;
+
+always_ff@(posedge vga_clk or negedge reset_n) begin
+    if (!reset_n) begin                          
+        Pout_hs_dn <= {N{1'b1}};
+        Pout_vs_dn <= {N{1'b1}}; 
+        Pout_de_dn <= {N{1'b0}}; 
+    end else begin                          
+        Pout_hs_dn <= {Pout_hs_dn[N-2:0],vga_hs_n};
+        Pout_vs_dn <= {Pout_vs_dn[N-2:0],vga_vs_n}; 
+        Pout_de_dn <= {Pout_de_dn[N-2:0],vga_de}; 
+    end
+end
+
+assign dvi_data = {sclout_r, sclout_g, sclout_b};
+assign dvi_vs_n = Pout_vs_dn[8];
+assign dvi_hs_n = Pout_hs_dn[8];
+assign dvi_de = Pout_de_dn[8];
+
+DVI_TX_Top u_dvi_tx (
     .I_rst_n(reset_n), //input I_rst_n
-    .I_serial_clk(vga_serial), //input I_serial_clk
+    .I_serial_clk(serial_clk), //input I_serial_clk
     .I_rgb_clk(vga_clk), //input I_rgb_clk
-    .I_rgb_vs(vga_vs), //input I_rgb_vs
-    .I_rgb_hs(vga_hs), //input I_rgb_hs
-    .I_rgb_de(vga_de), //input I_rgb_de
-    .I_rgb_r(rgb24[23:16]), //input [7:0] I_rgb_r
-    .I_rgb_g(rgb24[15:8]), //input [7:0] I_rgb_g
-    .I_rgb_b(rgb24[7:0]), //input [7:0] I_rgb_b
+    .I_rgb_vs(dvi_vs_n), //input I_rgb_vs
+    .I_rgb_hs(dvi_hs_n), //input I_rgb_hs
+    .I_rgb_de(dvi_de), //input I_rgb_de
+    .I_rgb_r(dvi_data[23:16]), //input [7:0] I_rgb_r
+    .I_rgb_g(dvi_data[15:8]), //input [7:0] I_rgb_g
+    .I_rgb_b(dvi_data[7:0]), //input [7:0] I_rgb_b
     .O_tmds_clk_p(dvi_clk_p), //output O_tmds_clk_p
     .O_tmds_clk_n(dvi_clk_n), //output O_tmds_clk_n
     .O_tmds_data_p(dvi_data_p), //output [2:0] O_tmds_data_p

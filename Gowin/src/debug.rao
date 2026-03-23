@@ -2,167 +2,87 @@
 <GAO_CONFIG>
     <Version>3.0</Version>
     <Mode>Standard</Mode>
-    <AoCore index="0" sample_clock="sclk" trig_type="0" storage_depth="8192" window_num="1" capture_amount="8192" implementation="0" trigger_pos="100" module_name="top" force_trigger_by_falling_edge="false" capture_init_data_enabled="true">
+    <AoCore index="0" sample_clock="vga_clk" trig_type="1" storage_depth="4096" window_num="1" capture_amount="4096" implementation="0" trigger_pos="100" module_name="top" force_trigger_by_falling_edge="false" capture_init_data_enabled="false">
         <SignalList>
-            <Signal capture_enable="true">clk14m</Signal>
-            <Signal capture_enable="true">sync</Signal>
-            <Signal capture_enable="true">serout</Signal>
-            <Signal capture_enable="true">wndw</Signal>
-            <Signal capture_enable="true">clrgat</Signal>
-            <Bus capture_enable="true" name="line[8:0]">
-                <Signal>line[8]</Signal>
-                <Signal>line[7]</Signal>
-                <Signal>line[6]</Signal>
-                <Signal>line[5]</Signal>
-                <Signal>line[4]</Signal>
-                <Signal>line[3]</Signal>
-                <Signal>line[2]</Signal>
-                <Signal>line[1]</Signal>
-                <Signal>line[0]</Signal>
+            <Signal capture_enable="true">rgb_vs_n</Signal>
+            <Signal capture_enable="true">rgb_hs_n</Signal>
+            <Signal capture_enable="true">rgb_de</Signal>
+            <Bus capture_enable="true" name="rgb_data[7:0]">
+                <Signal>rgb_data[7]</Signal>
+                <Signal>rgb_data[6]</Signal>
+                <Signal>rgb_data[5]</Signal>
+                <Signal>rgb_data[4]</Signal>
+                <Signal>rgb_data[3]</Signal>
+                <Signal>rgb_data[2]</Signal>
+                <Signal>rgb_data[1]</Signal>
+                <Signal>rgb_data[0]</Signal>
             </Bus>
-            <Bus capture_enable="true" name="pixel[9:0]">
-                <Signal>pixel[9]</Signal>
-                <Signal>pixel[8]</Signal>
-                <Signal>pixel[7]</Signal>
-                <Signal>pixel[6]</Signal>
-                <Signal>pixel[5]</Signal>
-                <Signal>pixel[4]</Signal>
-                <Signal>pixel[3]</Signal>
-                <Signal>pixel[2]</Signal>
-                <Signal>pixel[1]</Signal>
-                <Signal>pixel[0]</Signal>
-            </Bus>
-            <Signal capture_enable="true">vga_serial</Signal>
-            <Signal capture_enable="true">vga_clk</Signal>
-            <Signal capture_enable="true">vga_vs</Signal>
-            <Signal capture_enable="true">vga_hs</Signal>
+            <Signal capture_enable="true">vga_vs_n</Signal>
+            <Signal capture_enable="true">vga_hs_n</Signal>
             <Signal capture_enable="true">vga_de</Signal>
-            <Bus capture_enable="false" name="ar[7:0]">
-                <Signal>ar[7]</Signal>
-                <Signal>ar[6]</Signal>
-                <Signal>ar[5]</Signal>
-                <Signal>ar[4]</Signal>
-                <Signal>ar[3]</Signal>
-                <Signal>ar[2]</Signal>
-                <Signal>ar[1]</Signal>
-                <Signal>ar[0]</Signal>
+            <Signal capture_enable="true">vout_den</Signal>
+            <Bus capture_enable="true" name="vout_data[7:0]">
+                <Signal>vout_data[7]</Signal>
+                <Signal>vout_data[6]</Signal>
+                <Signal>vout_data[5]</Signal>
+                <Signal>vout_data[4]</Signal>
+                <Signal>vout_data[3]</Signal>
+                <Signal>vout_data[2]</Signal>
+                <Signal>vout_data[1]</Signal>
+                <Signal>vout_data[0]</Signal>
             </Bus>
-            <Bus capture_enable="false" name="din[7:0]">
-                <Signal>din[7]</Signal>
-                <Signal>din[6]</Signal>
-                <Signal>din[5]</Signal>
-                <Signal>din[4]</Signal>
-                <Signal>din[3]</Signal>
-                <Signal>din[2]</Signal>
-                <Signal>din[1]</Signal>
-                <Signal>din[0]</Signal>
+            <Bus capture_enable="true" name="sclin_b[7:0]">
+                <Signal>sclin_b[7]</Signal>
+                <Signal>sclin_b[6]</Signal>
+                <Signal>sclin_b[5]</Signal>
+                <Signal>sclin_b[4]</Signal>
+                <Signal>sclin_b[3]</Signal>
+                <Signal>sclin_b[2]</Signal>
+                <Signal>sclin_b[1]</Signal>
+                <Signal>sclin_b[0]</Signal>
             </Bus>
-            <Bus capture_enable="false" name="dout[7:0]">
-                <Signal>dout[7]</Signal>
-                <Signal>dout[6]</Signal>
-                <Signal>dout[5]</Signal>
-                <Signal>dout[4]</Signal>
-                <Signal>dout[3]</Signal>
-                <Signal>dout[2]</Signal>
-                <Signal>dout[1]</Signal>
-                <Signal>dout[0]</Signal>
+            <Bus capture_enable="true" name="sclout_b[7:0]">
+                <Signal>sclout_b[7]</Signal>
+                <Signal>sclout_b[6]</Signal>
+                <Signal>sclout_b[5]</Signal>
+                <Signal>sclout_b[4]</Signal>
+                <Signal>sclout_b[3]</Signal>
+                <Signal>sclout_b[2]</Signal>
+                <Signal>sclout_b[1]</Signal>
+                <Signal>sclout_b[0]</Signal>
             </Bus>
-            <Signal capture_enable="false">rw80</Signal>
-            <Bus capture_enable="false" name="d[7:0]">
-                <Signal>d[7]</Signal>
-                <Signal>d[6]</Signal>
-                <Signal>d[5]</Signal>
-                <Signal>d[4]</Signal>
-                <Signal>d[3]</Signal>
-                <Signal>d[2]</Signal>
-                <Signal>d[1]</Signal>
-                <Signal>d[0]</Signal>
-            </Bus>
-            <Signal capture_enable="false">pras_n</Signal>
-            <Signal capture_enable="false">reset</Signal>
-            <Signal capture_enable="false">q3</Signal>
-            <Bus capture_enable="false" name="count[7:0]">
-                <Signal>count[7]</Signal>
-                <Signal>count[6]</Signal>
-                <Signal>count[5]</Signal>
-                <Signal>count[4]</Signal>
-                <Signal>count[3]</Signal>
-                <Signal>count[2]</Signal>
-                <Signal>count[1]</Signal>
-                <Signal>count[0]</Signal>
-            </Bus>
-            <Bus capture_enable="false" name="addr[15:0]">
-                <Signal>addr[15]</Signal>
-                <Signal>addr[14]</Signal>
-                <Signal>addr[13]</Signal>
-                <Signal>addr[12]</Signal>
-                <Signal>addr[11]</Signal>
-                <Signal>addr[10]</Signal>
-                <Signal>addr[9]</Signal>
-                <Signal>addr[8]</Signal>
-                <Signal>addr[7]</Signal>
-                <Signal>addr[6]</Signal>
-                <Signal>addr[5]</Signal>
-                <Signal>addr[4]</Signal>
-                <Signal>addr[3]</Signal>
-                <Signal>addr[2]</Signal>
-                <Signal>addr[1]</Signal>
-                <Signal>addr[0]</Signal>
+            <Signal capture_enable="true">dvi_hs_n</Signal>
+            <Signal capture_enable="true">dvi_vs_n</Signal>
+            <Signal capture_enable="true">dvi_de</Signal>
+            <Bus capture_enable="true" name="dvi_data[7:0]">
+                <Signal>dvi_data[7]</Signal>
+                <Signal>dvi_data[6]</Signal>
+                <Signal>dvi_data[5]</Signal>
+                <Signal>dvi_data[4]</Signal>
+                <Signal>dvi_data[3]</Signal>
+                <Signal>dvi_data[2]</Signal>
+                <Signal>dvi_data[1]</Signal>
+                <Signal>dvi_data[0]</Signal>
             </Bus>
         </SignalList>
         <Triggers>
             <Trigger index="0">
                 <SignalList>
-                    <Signal>sync</Signal>
+                    <Signal>vga_vs_n</Signal>
                 </SignalList>
             </Trigger>
             <Trigger index="1">
                 <SignalList>
-                    <Bus restorename="addr[15:0]">
-                        <Signal>addr[15]</Signal>
-                        <Signal>addr[14]</Signal>
-                        <Signal>addr[13]</Signal>
-                        <Signal>addr[12]</Signal>
-                        <Signal>addr[11]</Signal>
-                        <Signal>addr[10]</Signal>
-                        <Signal>addr[9]</Signal>
-                        <Signal>addr[8]</Signal>
-                        <Signal>addr[7]</Signal>
-                        <Signal>addr[6]</Signal>
-                        <Signal>addr[5]</Signal>
-                        <Signal>addr[4]</Signal>
-                        <Signal>addr[3]</Signal>
-                        <Signal>addr[2]</Signal>
-                        <Signal>addr[1]</Signal>
-                        <Signal>addr[0]</Signal>
-                    </Bus>
+                    <Signal>buf_fstline_rdy</Signal>
                 </SignalList>
             </Trigger>
             <Trigger index="2">
                 <SignalList>
-                    <Signal>rgb_vs</Signal>
+                    <Signal>vga_hs_n</Signal>
                 </SignalList>
             </Trigger>
-            <Trigger index="3">
-                <SignalList>
-                    <Bus restorename="line[8:0]">
-                        <Signal>line[8]</Signal>
-                        <Signal>line[7]</Signal>
-                        <Signal>line[6]</Signal>
-                        <Signal>line[5]</Signal>
-                        <Signal>line[4]</Signal>
-                        <Signal>line[3]</Signal>
-                        <Signal>line[2]</Signal>
-                        <Signal>line[1]</Signal>
-                        <Signal>line[0]</Signal>
-                    </Bus>
-                </SignalList>
-            </Trigger>
-            <Trigger index="4">
-                <SignalList>
-                    <Signal>rw80</Signal>
-                </SignalList>
-            </Trigger>
+            <Trigger index="3"/>
+            <Trigger index="4"/>
             <Trigger index="5"/>
             <Trigger index="6"/>
             <Trigger index="7"/>
@@ -176,12 +96,12 @@
             <Trigger index="15"/>
         </Triggers>
         <MatchUnits>
-            <MatchUnit index="0" enabled="1" match_type="2" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0" value1="0" trigger="0"/>
-            <MatchUnit index="1" enabled="1" match_type="2" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0000010000000000" value1="0000000000000000" trigger="1"/>
-            <MatchUnit index="2" enabled="1" match_type="5" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="R" value1="0" trigger="2"/>
-            <MatchUnit index="3" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="000000000" value1="000000000" trigger="3"/>
-            <MatchUnit index="4" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0" value1="0" trigger="4"/>
-            <MatchUnit index="5" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="0" enabled="1" match_type="1" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="R" value1="0" trigger="0"/>
+            <MatchUnit index="1" enabled="1" match_type="1" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="R" value1="0" trigger="1"/>
+            <MatchUnit index="2" enabled="1" match_type="1" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="R" value1="0" trigger="2"/>
+            <MatchUnit index="3" enabled="0" match_type="1" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="R" value1="0" trigger="3"/>
+            <MatchUnit index="4" enabled="0" match_type="1" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="R" value1="0" trigger="4"/>
+            <MatchUnit index="5" enabled="0" match_type="1" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="R" value1="0" trigger="5"/>
             <MatchUnit index="6" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
             <MatchUnit index="7" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
             <MatchUnit index="8" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
@@ -193,9 +113,11 @@
             <MatchUnit index="14" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
             <MatchUnit index="15" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
         </MatchUnits>
-        <Expressions type="Dynamic" ex_implementation="2">
+        <Expressions type="Dynamic" ex_implementation="1">
             <Expression>M0</Expression>
+            <Expression>M1</Expression>
+            <Expression>M2</Expression>
         </Expressions>
     </AoCore>
-    <GAO_ID>1110000101111100</GAO_ID>
+    <GAO_ID>1101111110110000</GAO_ID>
 </GAO_CONFIG>

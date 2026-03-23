@@ -8,7 +8,7 @@ version=1.0
 
 [Config]
 DataFormat=VESA RGB 24bits
-FetchDataDelayValue=2
+FetchDataDelayValue=5
 InputFrameHeight=240
 InputFrameWidth=640
 Language=0

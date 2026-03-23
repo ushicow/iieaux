@@ -7,22 +7,22 @@
 
 -mod_name Gowin_rPLL
 -file_name gowin_rpll
--path /Users/ushicow/Projects/IIeAuxSlot/80coltextdvi/Gowin/src/gowin_rpll/
+-path /Users/ushicow/Projects/IIeAuxSlot/framebuffer/Gowin/src/gowin_rpll/
 -type PLL
 -rPll true
 -file_type vlg
 -ip_version 1.0
 -dev_type GW1NR-9C
 -dyn_idiv_sel false
--idiv_sel 1
+-idiv_sel 9
 -dyn_fbdiv_sel false
--fbdiv_sel 5
+-fbdiv_sel 40
 -dyn_odiv_sel false
--odiv_sel 8
+-odiv_sel 4
 -dyn_da_en true
 -rst_sig false
 -rst_sig_p false
--fclkin 14
+-fclkin 27
 -clkfb_sel 0
 -en_lock true
 -clkout_bypass false

@@ -14,9 +14,9 @@
 -ip_version 1.0
 -dev_type GW1NR-9C
 -dyn_idiv_sel false
--idiv_sel 6
+-idiv_sel 3
 -dyn_fbdiv_sel false
--fbdiv_sel 35
+-fbdiv_sel 14
 -dyn_odiv_sel false
 -odiv_sel 4
 -dyn_da_en true
@@ -24,7 +24,7 @@
 -rst_sig_p false
 -fclkin 27
 -clkfb_sel 0
--en_lock false
+-en_lock true
 -clkout_bypass false
 -clkout_ft_dir 1
 -en_clkoutp false

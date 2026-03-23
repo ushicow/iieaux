@@ -1,0 +1,129 @@
+<?xml version="1" encoding="UTF-8"?>
+<GAO_CONFIG>
+    <Version>3.0</Version>
+    <Mode>Standard</Mode>
+    <AoCore index="0" sample_clock="clk14m" trig_type="0" storage_depth="4096" window_num="1" capture_amount="4096" implementation="0" trigger_pos="100" module_name="top" force_trigger_by_falling_edge="false" capture_init_data_enabled="false">
+        <SignalList>
+            <Signal capture_enable="true">sync</Signal>
+            <Signal capture_enable="true">wndw</Signal>
+            <Signal capture_enable="true">rgb_vs_n</Signal>
+            <Signal capture_enable="true">rgb_hs_n</Signal>
+            <Signal capture_enable="true">rgb_de</Signal>
+            <Signal capture_enable="true">serout</Signal>
+            <Bus capture_enable="true" name="u_a2video/line[8:0]">
+                <Signal>u_a2video/line[8]</Signal>
+                <Signal>u_a2video/line[7]</Signal>
+                <Signal>u_a2video/line[6]</Signal>
+                <Signal>u_a2video/line[5]</Signal>
+                <Signal>u_a2video/line[4]</Signal>
+                <Signal>u_a2video/line[3]</Signal>
+                <Signal>u_a2video/line[2]</Signal>
+                <Signal>u_a2video/line[1]</Signal>
+                <Signal>u_a2video/line[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="u_a2video/pixel[9:0]">
+                <Signal>u_a2video/pixel[9]</Signal>
+                <Signal>u_a2video/pixel[8]</Signal>
+                <Signal>u_a2video/pixel[7]</Signal>
+                <Signal>u_a2video/pixel[6]</Signal>
+                <Signal>u_a2video/pixel[5]</Signal>
+                <Signal>u_a2video/pixel[4]</Signal>
+                <Signal>u_a2video/pixel[3]</Signal>
+                <Signal>u_a2video/pixel[2]</Signal>
+                <Signal>u_a2video/pixel[1]</Signal>
+                <Signal>u_a2video/pixel[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="u_a2video/count[9:0]">
+                <Signal>u_a2video/count[9]</Signal>
+                <Signal>u_a2video/count[8]</Signal>
+                <Signal>u_a2video/count[7]</Signal>
+                <Signal>u_a2video/count[6]</Signal>
+                <Signal>u_a2video/count[5]</Signal>
+                <Signal>u_a2video/count[4]</Signal>
+                <Signal>u_a2video/count[3]</Signal>
+                <Signal>u_a2video/count[2]</Signal>
+                <Signal>u_a2video/count[1]</Signal>
+                <Signal>u_a2video/count[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="rgb_data[7:0]">
+                <Signal>rgb_data[7]</Signal>
+                <Signal>rgb_data[6]</Signal>
+                <Signal>rgb_data[5]</Signal>
+                <Signal>rgb_data[4]</Signal>
+                <Signal>rgb_data[3]</Signal>
+                <Signal>rgb_data[2]</Signal>
+                <Signal>rgb_data[1]</Signal>
+                <Signal>rgb_data[0]</Signal>
+            </Bus>
+        </SignalList>
+        <Triggers>
+            <Trigger index="0">
+                <SignalList>
+                    <Signal>sync</Signal>
+                </SignalList>
+            </Trigger>
+            <Trigger index="1">
+                <SignalList>
+                    <Signal>rgb_vs_n</Signal>
+                </SignalList>
+            </Trigger>
+            <Trigger index="2">
+                <SignalList>
+                    <Signal>rgb_hs_n</Signal>
+                </SignalList>
+            </Trigger>
+            <Trigger index="3">
+                <SignalList>
+                    <Bus restorename="u_a2video/line[8:0]">
+                        <Signal>u_a2video/line[8]</Signal>
+                        <Signal>u_a2video/line[7]</Signal>
+                        <Signal>u_a2video/line[6]</Signal>
+                        <Signal>u_a2video/line[5]</Signal>
+                        <Signal>u_a2video/line[4]</Signal>
+                        <Signal>u_a2video/line[3]</Signal>
+                        <Signal>u_a2video/line[2]</Signal>
+                        <Signal>u_a2video/line[1]</Signal>
+                        <Signal>u_a2video/line[0]</Signal>
+                    </Bus>
+                </SignalList>
+            </Trigger>
+            <Trigger index="4"/>
+            <Trigger index="5"/>
+            <Trigger index="6"/>
+            <Trigger index="7"/>
+            <Trigger index="8"/>
+            <Trigger index="9"/>
+            <Trigger index="10"/>
+            <Trigger index="11"/>
+            <Trigger index="12"/>
+            <Trigger index="13"/>
+            <Trigger index="14"/>
+            <Trigger index="15"/>
+        </Triggers>
+        <MatchUnits>
+            <MatchUnit index="0" enabled="1" match_type="5" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="R" value1="0" trigger="0"/>
+            <MatchUnit index="1" enabled="1" match_type="1" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="R" value1="0" trigger="1"/>
+            <MatchUnit index="2" enabled="1" match_type="1" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="R" value1="0" trigger="2"/>
+            <MatchUnit index="3" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="000000001" value1="000000000" trigger="3"/>
+            <MatchUnit index="4" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="5" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="6" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="7" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="8" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="9" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="10" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="11" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="12" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="13" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="14" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="15" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+        </MatchUnits>
+        <Expressions type="Dynamic" ex_implementation="1">
+            <Expression>M0</Expression>
+            <Expression>M1</Expression>
+            <Expression>M2</Expression>
+            <Expression>M3</Expression>
+        </Expressions>
+    </AoCore>
+    <GAO_ID>0100010001111001</GAO_ID>
+</GAO_CONFIG>
