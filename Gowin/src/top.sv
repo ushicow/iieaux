@@ -12,7 +12,8 @@
 //   1.0.2 | 2026/03/07  | ushicow | 80 Column Text
 //   1.0.3 | 2026/03/11  | ushicow | DVI output test
 //   1.0.4 | 2026/03/15  | ushicow | VGA signal test
-//   1.0.5 | 2026z03z23  | ushicow | Frame Buffer
+//   1.0.5 | 2026/03/23  | ushicow | Frame Buffer
+//   1.1.1 | 2026/03/28  | ushicow | Extended 64KB memory PCB V1.1.1
 // --------------------------------------------------------------------
 `default_nettype none
 
@@ -22,11 +23,22 @@ module top (
     input wire pras_n,
     input wire q3,
     input wire rw80,
-    input wire wndw,
     input wire clrgat,
     input wire serout,
     input wire sync,
     input wire clk14m,
+    input wire gr,
+    input wire c07x,
+    input wire ldps,
+    input wire vid80,
+    input wire an3,
+    input wire en80,
+    input wire rw,
+    input wire phi1,
+    input wire phi0,
+    output wire ra_en,
+    output wire d_rw,
+    output wire md_en,
     output wire       dvi_clk_p,
     output wire       dvi_clk_n,
     output wire [2:0] dvi_data_p,
@@ -37,8 +49,20 @@ module top (
 	inout wire [15:0] IO_psram_dq,
 	output wire [1:0] O_psram_reset_n,
 	output wire [1:0] O_psram_cs_n,
+    output wire led1,
+    output wire led2,
+    output wire led3,
+    output wire led4,
+    output wire led5,
+    output wire led6,
     input wire mclk
 );
+
+assign led1 = pll_lock;
+assign led2 = reset_n;
+assign ra_en = 0;
+assign md_en = en80;
+assign d_rw = ~rw80;
 
 logic memory_clk;
 logic pll_lock;
@@ -54,7 +78,12 @@ always_ff@(negedge pras_n) begin
     row <= ar;
 end
 
-always_ff@(negedge q3) begin
+logic pcas_n;
+always_ff@(posedge clk14m) begin
+    pcas_n <= pras_n;
+end
+
+always_ff@(negedge pcas_n) begin
     addr[0] <= row[0];
     addr[1] <= row[1];
     addr[2] <= row[2];
@@ -74,14 +103,43 @@ always_ff@(negedge q3) begin
     din <= d;
 end
 
-Gowin_RAM16S u_sram (
-    .dout(dout), //output [7:0] dout
-    .wre(~rw80), //input wre
-    .ad(addr[9:0]), //input [9:0] ad
-    .di(din), //input [7:0] di
-    .clk(q3) //input clk
-);
+logic read;
+logic write;
+logic busy;
+assign write = !rw80 & ram_en;
+assign read = rw80 & ram_en;
+logic ram_en;
+logic pcas0;
+logic pcas1;
+logic pcas2;
+always_ff@(posedge memory_clk) begin
+    pcas0 <= pcas_n;
+    pcas1 <= pcas0;
+    pcas2 <= pcas1;
+end
+assign ram_en = (pcas2 & !pcas1) ? 1 : 0;
 
+logic [15:0] doutw;
+PsramController u_psc (
+    .clk(memory_clk),
+    .clk_p(clkoutp),        // phase-shifted clock for driving O_psram_ck
+    .resetn(pll_lock),
+    .read(read),            // Set to 1 to read from RAM
+    .write(write),          // Set to 1 to write to RAM
+    .addr({5'b0, addr, 1'b0}),    // Byte address to read / write
+    .din({din, din}),       // Data word to write
+    .byte_write(1'b1),      // When writing, only write one byte instead of the whole word. 
+                            // addr[0]==1 means we write the upper half of din. lower half otherwise.
+    .dout(doutw),            // Last read data. Read is always word-based.
+    .busy(busy),            // 1 while an operation is in progress
+
+    .O_psram_ck(O_psram_ck[1]),
+    .IO_psram_rwds(IO_psram_rwds[1]),
+    .IO_psram_dq(IO_psram_dq[15:8]),
+    .O_psram_cs_n(O_psram_cs_n[1]),
+    .O_psram_reset_n(O_psram_reset_n[1])
+);
+assign dout = doutw[7:0];
 
 // Apple II Video signals
 logic rgb_vs_n;         // RGB vertical sync, negative
@@ -92,7 +150,6 @@ Apple2_Video u_a2video (
     .I_clk14m(clk14m),
     .I_rst_n(reset_n),
     .I_sync_n(sync),
-    .I_wndw_n(wndw),
     .I_serout_n(serout),
     .O_rgb_vs_n(rgb_vs_n),
     .O_rgb_hs_n(rgb_hs_n),
@@ -173,11 +230,13 @@ logic cmd;
 logic cmd_en;
 logic init_calib;
 logic dma_clk;
+logic clkoutp;
 
 Gowin_rPLL u_pll(
-    .clkout(memory_clk), //output clkout 120 MHz
+    .clkout(memory_clk), //output clkout    81 MHz
     .lock(pll_lock), //output lock
-    .clkin(mclk) //input clkin            27 MHz
+    .clkoutp(clkoutp), //output clkoutp     90 deg
+    .clkin(mclk) //input clkin              27 MHz
 );
 
 PSRAM_Memory_Interface_HS_Top u_psram(
@@ -185,12 +244,12 @@ PSRAM_Memory_Interface_HS_Top u_psram(
     .memory_clk(memory_clk), //input memory_clk
     .pll_lock(reset_n), //input pll_lock
     .rst_n(1'b1), //input rst_n
-    .O_psram_ck(O_psram_ck), //output [0:0] O_psram_ck
-    .O_psram_ck_n(O_psram_ck_n), //output [0:0] O_psram_ck_n
-    .IO_psram_dq(IO_psram_dq), //inout [7:0] IO_psram_dq
-    .IO_psram_rwds(IO_psram_rwds), //inout [0:0] IO_psram_rwds
-    .O_psram_cs_n(O_psram_cs_n), //output [0:0] O_psram_cs_n
-    .O_psram_reset_n(O_psram_reset_n), //output [0:0] O_psram_reset_n
+    .O_psram_ck(O_psram_ck[0]), //output [0:0] O_psram_ck
+    .O_psram_ck_n(O_psram_ck_n[0]), //output [0:0] O_psram_ck_n
+    .IO_psram_dq(IO_psram_dq[7:0]), //inout [7:0] IO_psram_dq
+    .IO_psram_rwds(IO_psram_rwds[0]), //inout [0:0] IO_psram_rwds
+    .O_psram_cs_n(O_psram_cs_n[0]), //output [0:0] O_psram_cs_n
+    .O_psram_reset_n(O_psram_reset_n[0]), //output [0:0] O_psram_reset_n
     .wr_data(wr_data), //input [31:0] wr_data
     .rd_data(rd_data), //output [31:0] rd_data
     .rd_data_valid(rd_data_valid), //output rd_data_valid

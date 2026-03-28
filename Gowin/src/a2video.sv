@@ -15,12 +15,11 @@ module Apple2_Video (
     input wire I_clk14m,            // Apple II system clock
     input wire I_rst_n,             // reset, low active 
     input wire I_sync_n,            // Apple II video sync
-    input wire I_wndw_n,            // Apple II video nonblank window
     input wire I_serout_n,          // Apple II serial video out
-    output reg O_rgb_vs_n,          // RGB vertical sync, negative
-    output reg O_rgb_hs_n,          // RGB horizontal sync, negative
-    output reg O_rgb_de,            // RGB data enable
-    output reg [23:0] O_rgb_data    // 24 bits RGB data
+    output wire O_rgb_vs_n,          // RGB vertical sync, negative
+    output wire O_rgb_hs_n,          // RGB horizontal sync, negative
+    output wire O_rgb_de,            // RGB data enable
+    output wire [23:0] O_rgb_data    // 24 bits RGB data
 );
 
 parameter APPLE_SYNC = 56;

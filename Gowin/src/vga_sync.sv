@@ -1,5 +1,5 @@
 // ---------------------------------------------------------------------
-// File name         : vga_sync.v
+// File name         : vga_sync.sv
 // Module name       : VGA_Sync
 // Module Description: make standard VGA sync signals
 // Created by        : ushicow

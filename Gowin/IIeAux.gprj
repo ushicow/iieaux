@@ -7,9 +7,9 @@
     <FileList>
         <File path="src/a2video.sv" type="file.verilog" enable="1"/>
         <File path="src/dvi_tx/dvi_tx.v" type="file.verilog" enable="1"/>
-        <File path="src/gowin_ram16s/gowin_ram16s.v" type="file.verilog" enable="1"/>
         <File path="src/gowin_rpll/gowin_rpll.v" type="file.verilog" enable="1"/>
         <File path="src/gowin_rpll/gowin_rpll_vga.v" type="file.verilog" enable="1"/>
+        <File path="src/psram_controller.v" type="file.verilog" enable="1"/>
         <File path="src/psram_memory_interface_hs/psram_memory_interface_hs.v" type="file.verilog" enable="1"/>
         <File path="src/scaler_lite_up/scaler_lite_up.v" type="file.verilog" enable="1"/>
         <File path="src/top.sv" type="file.verilog" enable="1"/>
@@ -18,6 +18,9 @@
         <File path="src/pins.cst" type="file.cst" enable="1"/>
         <File path="src/IIeAux.sdc" type="file.sdc" enable="1"/>
         <File path="src/a2video.rao" type="file.gao" enable="0"/>
-        <File path="src/debug.rao" type="file.gao" enable="1"/>
+        <File path="src/debug.rao" type="file.gao" enable="0"/>
+        <File path="src/dhres.rao" type="file.gao" enable="0"/>
+        <File path="src/extram.rao" type="file.gao" enable="1"/>
+        <File path="src/psram.rao" type="file.gao" enable="0"/>
     </FileList>
 </Project>

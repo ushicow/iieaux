@@ -6,25 +6,27 @@
 //Part Number: GW1NR-LV9QN88PC6/I5
 //Device: GW1NR-9
 //Device Version: C
-//Created Time: Mon Mar 23 17:36:20 2026
+//Created Time: Sat Mar 28 21:06:10 2026
 
-module Gowin_rPLL (clkout, lock, clkin);
+module Gowin_rPLL (clkout, lock, clkoutp, clkin);
 
 output clkout;
 output lock;
+output clkoutp;
 input clkin;
 
-wire clkoutp_o;
 wire clkoutd_o;
 wire clkoutd3_o;
+wire gw_vcc;
 wire gw_gnd;
 
+assign gw_vcc = 1'b1;
 assign gw_gnd = 1'b0;
 
 rPLL rpll_inst (
     .CLKOUT(clkout),
     .LOCK(lock),
-    .CLKOUTP(clkoutp_o),
+    .CLKOUTP(clkoutp),
     .CLKOUTD(clkoutd_o),
     .CLKOUTD3(clkoutd3_o),
     .RESET(gw_gnd),
@@ -36,18 +38,18 @@ rPLL rpll_inst (
     .ODSEL({gw_gnd,gw_gnd,gw_gnd,gw_gnd,gw_gnd,gw_gnd}),
     .PSDA({gw_gnd,gw_gnd,gw_gnd,gw_gnd}),
     .DUTYDA({gw_gnd,gw_gnd,gw_gnd,gw_gnd}),
-    .FDLY({gw_gnd,gw_gnd,gw_gnd,gw_gnd})
+    .FDLY({gw_vcc,gw_vcc,gw_vcc,gw_vcc})
 );
 
 defparam rpll_inst.FCLKIN = "27";
 defparam rpll_inst.DYN_IDIV_SEL = "false";
-defparam rpll_inst.IDIV_SEL = 8;
+defparam rpll_inst.IDIV_SEL = 0;
 defparam rpll_inst.DYN_FBDIV_SEL = "false";
-defparam rpll_inst.FBDIV_SEL = 39;
+defparam rpll_inst.FBDIV_SEL = 2;
 defparam rpll_inst.DYN_ODIV_SEL = "false";
-defparam rpll_inst.ODIV_SEL = 4;
-defparam rpll_inst.PSDA_SEL = "0000";
-defparam rpll_inst.DYN_DA_EN = "true";
+defparam rpll_inst.ODIV_SEL = 8;
+defparam rpll_inst.PSDA_SEL = "0100";
+defparam rpll_inst.DYN_DA_EN = "false";
 defparam rpll_inst.DUTYDA_SEL = "1000";
 defparam rpll_inst.CLKOUT_FT_DIR = 1'b1;
 defparam rpll_inst.CLKOUTP_FT_DIR = 1'b1;

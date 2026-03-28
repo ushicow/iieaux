@@ -6,7 +6,7 @@
 //Part Number: GW1NR-LV9QN88PC6/I5
 //Device: GW1NR-9
 //Device Version: C
-//Created Time: Mon Mar 23 17:36:20 2026
+//Created Time: Sat Mar 28 21:06:10 2026
 
 //Change the instance name and port connections to the signal names
 //--------Copy here to design--------
@@ -14,6 +14,7 @@
     Gowin_rPLL your_instance_name(
         .clkout(clkout), //output clkout
         .lock(lock), //output lock
+        .clkoutp(clkoutp), //output clkoutp
         .clkin(clkin) //input clkin
     );
 
