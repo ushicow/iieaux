@@ -18,6 +18,7 @@
         <File path="src/pins.cst" type="file.cst" enable="1"/>
         <File path="src/IIeAux.sdc" type="file.sdc" enable="1"/>
         <File path="src/a2video.rao" type="file.gao" enable="0"/>
+        <File path="src/color.rao" type="file.gao" enable="0"/>
         <File path="src/debug.rao" type="file.gao" enable="0"/>
         <File path="src/dhres.rao" type="file.gao" enable="0"/>
         <File path="src/extram.rao" type="file.gao" enable="1"/>

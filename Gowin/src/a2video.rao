@@ -5,7 +5,6 @@
     <AoCore index="0" sample_clock="clk14m" trig_type="0" storage_depth="4096" window_num="1" capture_amount="4096" implementation="0" trigger_pos="100" module_name="top" force_trigger_by_falling_edge="false" capture_init_data_enabled="false">
         <SignalList>
             <Signal capture_enable="true">sync</Signal>
-            <Signal capture_enable="true">wndw</Signal>
             <Signal capture_enable="true">rgb_vs_n</Signal>
             <Signal capture_enable="true">rgb_hs_n</Signal>
             <Signal capture_enable="true">rgb_de</Signal>
@@ -125,5 +124,5 @@
             <Expression>M3</Expression>
         </Expressions>
     </AoCore>
-    <GAO_ID>0100010001111001</GAO_ID>
+    <GAO_ID>0101010001011110</GAO_ID>
 </GAO_CONFIG>

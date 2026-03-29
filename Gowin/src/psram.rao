@@ -9,14 +9,9 @@
             <Signal capture_enable="true">q3</Signal>
             <Signal capture_enable="true">pras_n</Signal>
             <Signal capture_enable="true">pcas_n</Signal>
-            <Signal capture_enable="true">pcas0_n</Signal>
-            <Signal capture_enable="true">pcas1_n</Signal>
             <Signal capture_enable="true">en80</Signal>
             <Signal capture_enable="true">rw80</Signal>
             <Signal capture_enable="true">dma_clk</Signal>
-            <Signal capture_enable="true">cmd0</Signal>
-            <Signal capture_enable="true">cmd_en0</Signal>
-            <Signal capture_enable="true">init_calib0</Signal>
             <Bus capture_enable="true" name="dma_addr0[20:0]">
                 <Signal>dma_addr0[20]</Signal>
                 <Signal>dma_addr0[19]</Signal>
@@ -108,6 +103,9 @@
                 <Signal>wr_data0[1]</Signal>
                 <Signal>wr_data0[0]</Signal>
             </Bus>
+            <Signal capture_enable="true">pcas0</Signal>
+            <Signal capture_enable="true">pcas1</Signal>
+            <Signal capture_enable="true">pcas2</Signal>
         </SignalList>
         <Triggers>
             <Trigger index="0">
@@ -157,5 +155,5 @@
             <Expression>M1</Expression>
         </Expressions>
     </AoCore>
-    <GAO_ID>1001001101000100</GAO_ID>
+    <GAO_ID>1101100101101011</GAO_ID>
 </GAO_CONFIG>

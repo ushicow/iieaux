@@ -14,6 +14,7 @@
 //   1.0.4 | 2026/03/15  | ushicow | VGA signal test
 //   1.0.5 | 2026/03/23  | ushicow | Frame Buffer
 //   1.1.1 | 2026/03/28  | ushicow | Extended 64KB memory PCB V1.1.1
+//   1.1.2 | 2026/03/29  | ushicow | Color graphics
 // --------------------------------------------------------------------
 `default_nettype none
 
@@ -60,6 +61,11 @@ module top (
 
 assign led1 = pll_lock;
 assign led2 = reset_n;
+//assign led3 = gr;
+//assign led4 = vid80;
+//assign led5 = an3;
+//assign led6 = clrgat;
+
 assign ra_en = 0;
 assign md_en = en80;
 assign d_rw = ~rw80;
@@ -112,12 +118,14 @@ logic ram_en;
 logic pcas0;
 logic pcas1;
 logic pcas2;
+logic pcas3;
 always_ff@(posedge memory_clk) begin
     pcas0 <= pcas_n;
     pcas1 <= pcas0;
     pcas2 <= pcas1;
+    pcas3 <= pcas2;
 end
-assign ram_en = (pcas2 & !pcas1) ? 1 : 0;
+assign ram_en = (pcas3 & !pcas2) ? 1 : 0;
 
 logic [15:0] doutw;
 PsramController u_psc (
@@ -151,6 +159,7 @@ Apple2_Video u_a2video (
     .I_rst_n(reset_n),
     .I_sync_n(sync),
     .I_serout_n(serout),
+    .I_gr(gr),
     .O_rgb_vs_n(rgb_vs_n),
     .O_rgb_hs_n(rgb_hs_n),
     .O_rgb_de(rgb_de),
