@@ -15,6 +15,7 @@
 //   1.0.5 | 2026/03/23  | ushicow | Frame Buffer
 //   1.1.1 | 2026/03/28  | ushicow | Extended 64KB memory PCB V1.1.1
 //   1.1.2 | 2026/03/29  | ushicow | Color graphics
+//   1.1.3 | 2026/03/30  | ushicow | modify byte R/W 
 // --------------------------------------------------------------------
 `default_nettype none
 
@@ -134,11 +135,11 @@ PsramController u_psc (
     .resetn(pll_lock),
     .read(read),            // Set to 1 to read from RAM
     .write(write),          // Set to 1 to write to RAM
-    .addr({5'b0, addr, 1'b0}),    // Byte address to read / write
+    .addr({6'b0, addr}),    // Byte address to read / write
     .din({din, din}),       // Data word to write
     .byte_write(1'b1),      // When writing, only write one byte instead of the whole word. 
                             // addr[0]==1 means we write the upper half of din. lower half otherwise.
-    .dout(doutw),            // Last read data. Read is always word-based.
+    .dout(doutw),           // Last read data. Read is always word-based.
     .busy(busy),            // 1 while an operation is in progress
 
     .O_psram_ck(O_psram_ck[1]),
@@ -147,7 +148,7 @@ PsramController u_psc (
     .O_psram_cs_n(O_psram_cs_n[1]),
     .O_psram_reset_n(O_psram_reset_n[1])
 );
-assign dout = doutw[7:0];
+assign dout = addr[0] ? doutw[15:8] : doutw[7:0];
 
 // Apple II Video signals
 logic rgb_vs_n;         // RGB vertical sync, negative

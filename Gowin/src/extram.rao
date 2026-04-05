@@ -73,6 +73,9 @@
             <Signal capture_enable="true">read</Signal>
             <Signal capture_enable="true">write</Signal>
             <Signal capture_enable="true">busy</Signal>
+            <Signal capture_enable="true">gr</Signal>
+            <Signal capture_enable="true">vid80</Signal>
+            <Signal capture_enable="true">an3</Signal>
         </SignalList>
         <Triggers>
             <Trigger index="0">
@@ -118,5 +121,5 @@
             <Expression>M0</Expression>
         </Expressions>
     </AoCore>
-    <GAO_ID>1100110110001101</GAO_ID>
+    <GAO_ID>0010110110000101</GAO_ID>
 </GAO_CONFIG>
