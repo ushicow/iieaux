@@ -16,6 +16,8 @@
 //   1.1.1 | 2026/03/28  | ushicow | Extended 64KB memory PCB V1.1.1
 //   1.1.2 | 2026/03/29  | ushicow | Color graphics
 //   1.1.3 | 2026/03/30  | ushicow | modify byte R/W 
+//   1.1.4 | 2026/04/05  | ushicow | color/mono switch
+//   1.1.5 | 2026z04/06  | ushicow | change the psram clock to 72MHz
 // --------------------------------------------------------------------
 `default_nettype none
 
@@ -62,10 +64,19 @@ module top (
 
 assign led1 = pll_lock;
 assign led2 = reset_n;
-//assign led3 = gr;
-//assign led4 = vid80;
-//assign led5 = an3;
-//assign led6 = clrgat;
+assign led3 = gr;
+assign led4 = vid80;
+assign led5 = an3;
+assign led6 = hgr;
+
+logic hgr;
+always_ff@(posedge phi0) begin
+    if ((addr[15:12] >= 4'h2) & (addr[15:12] < 4'h6)) begin
+        hgr <= 1;
+    end else begin
+        hgr <= 0;
+    end
+end
 
 assign ra_en = 0;
 assign md_en = en80;
@@ -119,14 +130,12 @@ logic ram_en;
 logic pcas0;
 logic pcas1;
 logic pcas2;
-logic pcas3;
 always_ff@(posedge memory_clk) begin
     pcas0 <= pcas_n;
     pcas1 <= pcas0;
     pcas2 <= pcas1;
-    pcas3 <= pcas2;
 end
-assign ram_en = (pcas3 & !pcas2) ? 1 : 0;
+assign ram_en = (pcas2 & !pcas1) ? 1 : 0;
 
 logic [15:0] doutw;
 PsramController u_psc (
@@ -150,6 +159,43 @@ PsramController u_psc (
 );
 assign dout = addr[0] ? doutw[15:8] : doutw[7:0];
 
+logic mono;
+logic [2:0] mstat;
+logic pre_an3;
+always_ff@(posedge phi0 or negedge reset_n) begin
+    if (!reset_n) begin
+        mono <= 0;
+        mstat <= 3'b000;
+    end else begin
+        pre_an3 <= an3;
+        if (hgr & (an3 != pre_an3)) begin
+            if (vid80) begin        // 80COL OFF
+                case (mstat)
+                    0: mstat <= an3 ? 1 : 0;
+                    1: mstat <= !an3 ? 2 : 0;
+                    2: mstat <= an3 ? 3 : 0; 
+                    default: mstat <= 0;
+                endcase
+            end else begin          // 80COL ON
+                case (mstat)
+                    3: begin
+                        mono <= !an3 ? 1 : mono;
+                        mstat <= 0;
+                    end
+                    0: mstat <= an3 ? 4 : 0;
+                    4: mstat <= !an3 ? 5 : 0;
+                    5: mstat <= an3 ? 6 : 0;
+                    6: begin
+                        mono <= !an3 ? 0 : mono;
+                        mstat <= 0;
+                    end
+                    default: mstat <= 0;
+                endcase
+            end
+        end
+    end
+end
+
 // Apple II Video signals
 logic rgb_vs_n;         // RGB vertical sync, negative
 logic rgb_hs_n;         // RGB horizontal sync, negative
@@ -161,6 +207,7 @@ Apple2_Video u_a2video (
     .I_sync_n(sync),
     .I_serout_n(serout),
     .I_gr(gr),
+    .I_mono(mono),
     .O_rgb_vs_n(rgb_vs_n),
     .O_rgb_hs_n(rgb_hs_n),
     .O_rgb_de(rgb_de),
@@ -243,7 +290,7 @@ logic dma_clk;
 logic clkoutp;
 
 Gowin_rPLL u_pll(
-    .clkout(memory_clk), //output clkout    81 MHz
+    .clkout(memory_clk), //output clkout    72 MHz
     .lock(pll_lock), //output lock
     .clkoutp(clkoutp), //output clkoutp     90 deg
     .clkin(mclk) //input clkin              27 MHz

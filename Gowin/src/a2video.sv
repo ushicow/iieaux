@@ -18,6 +18,7 @@ module Apple2_Video (
     input wire I_sync_n,            // Apple II video sync
     input wire I_serout_n,          // Apple II serial video out
     input wire I_gr,                // Graphic mode
+    input wire I_mono,              // Mono chrome mode
     output wire O_rgb_vs_n,         // RGB vertical sync, negative
     output wire O_rgb_hs_n,         // RGB horizontal sync, negative
     output wire O_rgb_de,           // RGB data enable
@@ -146,7 +147,7 @@ end
 assign O_rgb_vs_n = rgb_vs_n;
 assign O_rgb_hs_n = rgb_hs_n;
 assign O_rgb_de = rgb_de;
-assign O_rgb_data = I_gr ? rgb_data : bw_data;
+assign O_rgb_data = (I_gr & !I_mono) ? rgb_data : bw_data;
 
 endmodule
 
