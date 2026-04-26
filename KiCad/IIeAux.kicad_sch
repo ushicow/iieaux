@@ -6,11 +6,12 @@
 	(paper "A4")
 	(title_block
 		(title "IIeAux")
-		(date "2026-03-28")
-		(rev "1.1.1")
+		(date "2026-04-26")
+		(rev "1.1.6")
 		(company "nanja.info")
 		(comment 1 "Apple IIe Aux Slot FPGA Card")
 		(comment 2 "Use SEROUT")
+		(comment 3 "correct data bus timing")
 	)
 	(lib_symbols
 		(symbol "Apple2_bus:R"
@@ -5507,22 +5508,16 @@
 		(uuid "ed7ef118-9d80-496b-bc6c-70fce7f35d11")
 	)
 	(no_connect
+		(at 172.72 49.53)
+		(uuid "f200242b-fdcc-423b-af4c-48d3c02ae930")
+	)
+	(no_connect
 		(at 210.82 80.01)
 		(uuid "f4a51573-e6b5-4733-b0ec-3d2f35da1f3f")
 	)
 	(no_connect
 		(at 41.91 97.79)
 		(uuid "fb9df1b9-d4ad-4753-896b-e1b6c484d59e")
-	)
-	(wire
-		(pts
-			(xy 171.45 49.53) (xy 172.72 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0019ecbf-28da-4b5d-bf1e-3b97a03dc76c")
 	)
 	(wire
 		(pts
@@ -10040,28 +10035,6 @@
 			)
 		)
 	)
-	(global_label "MD_EN"
-		(shape input)
-		(at 171.45 49.53 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "8099dbfc-ab73-44b3-896f-044b6ddabd59")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 162.2963 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "SYNC"
 		(shape input)
 		(at 40.64 36.83 180)
@@ -10216,7 +10189,7 @@
 			)
 		)
 	)
-	(global_label "MD_EN"
+	(global_label "EN80"
 		(shape input)
 		(at 62.23 156.21 0)
 		(fields_autoplaced yes)
@@ -10228,7 +10201,7 @@
 		)
 		(uuid "8e41edf9-aa8c-4f3d-a4c1-d9e8b8e43bd1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 71.3837 156.21 0)
+			(at 70.1137 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)

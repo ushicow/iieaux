@@ -9,6 +9,7 @@
             <Signal capture_enable="true">q3</Signal>
             <Signal capture_enable="true">pras_n</Signal>
             <Signal capture_enable="true">pcas_n</Signal>
+            <Signal capture_enable="true">rw</Signal>
             <Signal capture_enable="true">en80</Signal>
             <Signal capture_enable="true">rw80</Signal>
             <Bus capture_enable="true" name="d[7:0]">
@@ -70,12 +71,16 @@
                 <Signal>dout[1]</Signal>
                 <Signal>dout[0]</Signal>
             </Bus>
+            <Signal capture_enable="true">dout_en</Signal>
             <Signal capture_enable="true">read</Signal>
             <Signal capture_enable="true">write</Signal>
             <Signal capture_enable="true">busy</Signal>
             <Signal capture_enable="true">gr</Signal>
             <Signal capture_enable="true">vid80</Signal>
             <Signal capture_enable="true">an3</Signal>
+            <Signal capture_enable="true">ra_en</Signal>
+            <Signal capture_enable="true">d_rw</Signal>
+            <Signal capture_enable="true">md_en</Signal>
         </SignalList>
         <Triggers>
             <Trigger index="0">
@@ -121,5 +126,5 @@
             <Expression>M0</Expression>
         </Expressions>
     </AoCore>
-    <GAO_ID>0010110110000101</GAO_ID>
+    <GAO_ID>0100001101011110</GAO_ID>
 </GAO_CONFIG>

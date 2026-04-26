@@ -17,7 +17,8 @@
 //   1.1.2 | 2026/03/29  | ushicow | Color graphics
 //   1.1.3 | 2026/03/30  | ushicow | modify byte R/W 
 //   1.1.4 | 2026/04/05  | ushicow | color/mono switch
-//   1.1.5 | 2026z04/06  | ushicow | change the psram clock to 72MHz
+//   1.1.5 | 2026/04/06  | ushicow | change the psram clock to 72MHz
+//   1.1.6 | 2026/04/26  | ushicow | correct data bus timing
 // --------------------------------------------------------------------
 `default_nettype none
 
@@ -42,7 +43,7 @@ module top (
     input wire phi0,
     output wire ra_en,
     output wire d_rw,
-    output wire md_en,
+//    output wire md_en,
     output wire       dvi_clk_p,
     output wire       dvi_clk_n,
     output wire [2:0] dvi_data_p,
@@ -79,7 +80,7 @@ always_ff@(posedge phi0) begin
 end
 
 assign ra_en = 0;
-assign md_en = en80;
+//assign md_en = en80;
 assign d_rw = ~rw80;
 
 logic memory_clk;
@@ -90,6 +91,7 @@ logic [15:0] addr;
 logic [7:0] din;
 logic [7:0] dout;
 
+//assign d = 8'bz;
 assign d = rw80 ? dout : 8'bz;
 
 always_ff@(negedge pras_n) begin
@@ -118,7 +120,7 @@ always_ff@(negedge pcas_n) begin
     addr[13] <= ar[5];
     addr[14] <= ar[6];
     addr[15] <= ar[7];
-    din <= d;
+    din <= rw80 ? 8'bz : d;
 end
 
 logic read;
@@ -138,7 +140,7 @@ end
 assign ram_en = (pcas2 & !pcas1) ? 1 : 0;
 
 logic [15:0] doutw;
-PsramController u_psc (
+PsramController #(.FREQ(72_000_000)) u_psc (
     .clk(memory_clk),
     .clk_p(clkoutp),        // phase-shifted clock for driving O_psram_ck
     .resetn(pll_lock),
@@ -157,7 +159,16 @@ PsramController u_psc (
     .O_psram_cs_n(O_psram_cs_n[1]),
     .O_psram_reset_n(O_psram_reset_n[1])
 );
-assign dout = addr[0] ? doutw[15:8] : doutw[7:0];
+
+logic dout_en;
+always_ff@(posedge memory_clk) begin
+    if (busy) begin
+        dout_en <= 1;
+    end else if (dout_en) begin
+        dout <= addr[0] ? doutw[15:8] : doutw[7:0];
+        dout_en <= 0;
+    end
+end
 
 logic mono;
 logic [2:0] mstat;

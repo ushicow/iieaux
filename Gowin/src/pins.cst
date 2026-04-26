@@ -10,6 +10,7 @@
 //   1.0.1 | 2026/03/01  | ushicow | for 1st batch of PCB
 //   1.0.2 | 2026/03/07  | ushicow | 80 Column Text
 //   1.1.1 | 2026/03/28  | ushicow | Extended 64KB memory PCB V1.1.1
+//   1.1.6 | 2026/04/26  | ushicow | correct data bus timing
 // --------------------------------------------------------------------
 
 IO_LOC "led6" 16;
@@ -41,8 +42,8 @@ IO_LOC "ra_en" 38;
 IO_PORT "ra_en" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
 IO_LOC "d_rw" 36;
 IO_PORT "d_rw" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
-IO_LOC "md_en" 39;
-IO_PORT "md_en" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
+//IO_LOC "md_en" 39;
+//IO_PORT "md_en" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
 
 IO_LOC "gr" 25;
 IO_PORT "gr" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
