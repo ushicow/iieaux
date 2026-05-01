@@ -41,3 +41,6 @@ fp-info-cache
 
 # Production files
 production
+
+# history
+.history
