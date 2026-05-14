@@ -19,31 +19,30 @@
 //   1.1.4 | 2026/04/05  | ushicow | color/mono switch
 //   1.1.5 | 2026/04/06  | ushicow | change the psram clock to 72MHz
 //   1.1.6 | 2026/04/26  | ushicow | correct data bus timing
+//   2.0.0 | 2026/05/13  | ushicow | PCB V2.0
 // --------------------------------------------------------------------
 `default_nettype none
 
 module top (
     inout wire [7:0] d,
     input wire [7:0] ar,
-    input wire pras_n,
-    input wire q3,
-    input wire rw80,
-    input wire clrgat,
-    input wire serout,
-    input wire sync,
-    input wire clk14m,
     input wire gr,
-    input wire c07x,
-    input wire ldps,
-    input wire vid80,
+    input wire q3,
+    input wire sync,
+    input wire pras_n,
     input wire an3,
-    input wire en80,
+    input wire c07x,
     input wire rw,
-    input wire phi1,
     input wire phi0,
-    output wire ra_en,
+    input wire vid80,
+    input wire en80,
+    input wire rw80,
+    input wire clk14m,
+    input wire serout,
+    input wire mode,
+    input wire sw1,
+    input wire sw2,
     output wire d_rw,
-//    output wire md_en,
     output wire       dvi_clk_p,
     output wire       dvi_clk_n,
     output wire [2:0] dvi_data_p,
@@ -79,8 +78,6 @@ always_ff@(posedge phi0) begin
     end
 end
 
-assign ra_en = 0;
-//assign md_en = en80;
 assign d_rw = ~rw80;
 
 logic memory_clk;
