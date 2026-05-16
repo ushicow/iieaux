@@ -75,12 +75,27 @@
             <Signal capture_enable="true">read</Signal>
             <Signal capture_enable="true">write</Signal>
             <Signal capture_enable="true">busy</Signal>
-            <Signal capture_enable="true">gr</Signal>
-            <Signal capture_enable="true">vid80</Signal>
-            <Signal capture_enable="true">an3</Signal>
-            <Signal capture_enable="true">ra_en</Signal>
             <Signal capture_enable="true">d_rw</Signal>
-            <Signal capture_enable="true">md_en</Signal>
+            <Signal capture_enable="true">c07x</Signal>
+            <Signal capture_enable="true">out_of_bank</Signal>
+            <Bus capture_enable="true" name="bs[5:0]">
+                <Signal>bs[5]</Signal>
+                <Signal>bs[4]</Signal>
+                <Signal>bs[3]</Signal>
+                <Signal>bs[2]</Signal>
+                <Signal>bs[1]</Signal>
+                <Signal>bs[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="bank[7:0]">
+                <Signal>bank[7]</Signal>
+                <Signal>bank[6]</Signal>
+                <Signal>bank[5]</Signal>
+                <Signal>bank[4]</Signal>
+                <Signal>bank[3]</Signal>
+                <Signal>bank[2]</Signal>
+                <Signal>bank[1]</Signal>
+                <Signal>bank[0]</Signal>
+            </Bus>
         </SignalList>
         <Triggers>
             <Trigger index="0">
@@ -88,7 +103,11 @@
                     <Signal>en80</Signal>
                 </SignalList>
             </Trigger>
-            <Trigger index="1"/>
+            <Trigger index="1">
+                <SignalList>
+                    <Signal>c07x</Signal>
+                </SignalList>
+            </Trigger>
             <Trigger index="2"/>
             <Trigger index="3"/>
             <Trigger index="4"/>
@@ -106,7 +125,7 @@
         </Triggers>
         <MatchUnits>
             <MatchUnit index="0" enabled="1" match_type="1" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="F" value1="0" trigger="0"/>
-            <MatchUnit index="1" enabled="0" match_type="1" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="F" value1="0" trigger="1"/>
+            <MatchUnit index="1" enabled="1" match_type="1" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="F" value1="0" trigger="1"/>
             <MatchUnit index="2" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
             <MatchUnit index="3" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
             <MatchUnit index="4" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
@@ -126,5 +145,5 @@
             <Expression>M0</Expression>
         </Expressions>
     </AoCore>
-    <GAO_ID>0100001101011110</GAO_ID>
+    <GAO_ID>0101101011110111</GAO_ID>
 </GAO_CONFIG>

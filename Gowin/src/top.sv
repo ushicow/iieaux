@@ -19,7 +19,8 @@
 //   1.1.4 | 2026/04/05  | ushicow | color/mono switch
 //   1.1.5 | 2026/04/06  | ushicow | change the psram clock to 72MHz
 //   1.1.6 | 2026/04/26  | ushicow | correct data bus timing
-//   2.0.0 | 2026/05/13  | ushicow | PCB V2.0
+//   2.0.1 | 2026/05/13  | ushicow | PCB V2.0
+//   2.0.2 | 2026/05/13  | ushicow | 4MB of RAM
 // --------------------------------------------------------------------
 `default_nettype none
 
@@ -78,7 +79,7 @@ always_ff@(posedge phi0) begin
     end
 end
 
-assign d_rw = ~rw80;
+assign d_rw = ~rw80 | (!c07x & !rw);
 
 logic memory_clk;
 logic pll_lock;
@@ -88,8 +89,26 @@ logic [15:0] addr;
 logic [7:0] din;
 logic [7:0] dout;
 
-//assign d = 8'bz;
-assign d = rw80 ? dout : 8'bz;
+assign d = d_rw ? 8'bz : dout;
+
+logic [7:0] bank;
+logic out_of_bank;
+always_ff@(negedge pcas_n or negedge reset_n) begin
+    if (!reset_n) begin
+        bank <= 0;
+        out_of_bank <= 0;
+    end else if (!c07x & !rw & (row[3:0] == 4'h3)) begin
+        if (d < 8'b11110000) begin
+            bank <= d;
+            out_of_bank <= 0;
+        end else begin
+            out_of_bank <= 1;
+        end
+    end
+end
+
+logic [5:0] bs;
+assign bs = phi0 ? bank[5:0] : 0;
 
 always_ff@(negedge pras_n) begin
     row <= ar;
@@ -143,7 +162,7 @@ PsramController #(.FREQ(72_000_000)) u_psc (
     .resetn(pll_lock),
     .read(read),            // Set to 1 to read from RAM
     .write(write),          // Set to 1 to write to RAM
-    .addr({6'b0, addr}),    // Byte address to read / write
+    .addr({bs, addr}),      // Byte address to read / write
     .din({din, din}),       // Data word to write
     .byte_write(1'b1),      // When writing, only write one byte instead of the whole word. 
                             // addr[0]==1 means we write the upper half of din. lower half otherwise.
@@ -162,7 +181,11 @@ always_ff@(posedge memory_clk) begin
     if (busy) begin
         dout_en <= 1;
     end else if (dout_en) begin
-        dout <= addr[0] ? doutw[15:8] : doutw[7:0];
+        if (out_of_bank) begin
+            dout <= 8'bz;
+        end else begin
+            dout <= addr[0] ? doutw[15:8] : doutw[7:0];
+        end
         dout_en <= 0;
     end
 end

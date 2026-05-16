@@ -18,3 +18,4 @@ set_clock_groups -asynchronous -group [get_clocks {memory_clk}] -group [get_cloc
 set_clock_groups -asynchronous -group [get_clocks {vga_clk}] -group [get_clocks {dma_clk}]
 set_clock_groups -asynchronous -group [get_clocks {mclk}] -group [get_clocks {memory_clk}]
 set_clock_groups -asynchronous -group [get_clocks {memory_clk}] -group [get_clocks {dma_clk}]
+set_clock_groups -asynchronous -group [get_clocks {memory_clk}] -group [get_clocks {phi0}]
