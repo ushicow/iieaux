@@ -21,6 +21,7 @@
 //   1.1.6 | 2026/04/26  | ushicow | correct data bus timing
 //   2.0.1 | 2026/05/13  | ushicow | PCB V2.0
 //   2.0.2 | 2026/05/13  | ushicow | 4MB of RAM
+//   2.0.3 | 2026/05/16  | ushicow | text color mode
 // --------------------------------------------------------------------
 `default_nettype none
 
@@ -40,7 +41,7 @@ module top (
     input wire rw80,
     input wire clk14m,
     input wire serout,
-    input wire mode,
+    input wire push_n,
     input wire sw1,
     input wire sw2,
     output wire d_rw,
@@ -63,8 +64,8 @@ module top (
     input wire mclk
 );
 
-assign led1 = pll_lock;
-assign led2 = reset_n;
+assign led1 = reset_n;
+assign led2 = mono;
 assign led3 = gr;
 assign led4 = vid80;
 assign led5 = an3;
@@ -175,6 +176,7 @@ PsramController #(.FREQ(72_000_000)) u_psc (
     .O_psram_cs_n(O_psram_cs_n[1]),
     .O_psram_reset_n(O_psram_reset_n[1])
 );
+assign O_psram_ck_n = 0;
 
 logic dout_en;
 always_ff@(posedge memory_clk) begin
@@ -191,11 +193,13 @@ always_ff@(posedge memory_clk) begin
 end
 
 logic mono;
+logic mono_sw1;
+logic mono_sw2;
 logic [2:0] mstat;
 logic pre_an3;
 always_ff@(posedge phi0 or negedge reset_n) begin
     if (!reset_n) begin
-        mono <= 0;
+        mono_sw1 <= 0;
         mstat <= 3'b000;
     end else begin
         pre_an3 <= an3;
@@ -210,14 +214,18 @@ always_ff@(posedge phi0 or negedge reset_n) begin
             end else begin          // 80COL ON
                 case (mstat)
                     3: begin
-                        mono <= !an3 ? 1 : mono;
+                        if (!an3) begin
+                            mono_sw1 <= mono ? mono_sw1 : ~mono_sw1;
+                        end
                         mstat <= 0;
                     end
                     0: mstat <= an3 ? 4 : 0;
                     4: mstat <= !an3 ? 5 : 0;
                     5: mstat <= an3 ? 6 : 0;
                     6: begin
-                        mono <= !an3 ? 0 : mono;
+                        if (!an3) begin
+                            mono_sw1 <= mono ? ~mono_sw1 : mono_sw1;
+                        end
                         mstat <= 0;
                     end
                     default: mstat <= 0;
@@ -226,6 +234,24 @@ always_ff@(posedge phi0 or negedge reset_n) begin
         end
     end
 end
+
+logic push0_n;
+debouncer dedouncer_u (
+    .clk(mclk),
+    .rst_n(reset_n),
+    .button_in(push_n),
+    .button_out(push0_n)
+);
+
+always_ff@(negedge push0_n or negedge reset_n) begin
+    if (!reset_n) begin
+        mono_sw2 <= 0;
+    end else begin
+        mono_sw2 <= ~mono_sw2;
+    end
+end
+
+assign mono = mono_sw1 ^ mono_sw2;
 
 // Apple II Video signals
 logic rgb_vs_n;         // RGB vertical sync, negative
@@ -239,6 +265,7 @@ Apple2_Video u_a2video (
     .I_serout_n(serout),
     .I_gr(gr),
     .I_mono(mono),
+    .I_sw({sw1, sw2}),
     .O_rgb_vs_n(rgb_vs_n),
     .O_rgb_hs_n(rgb_hs_n),
     .O_rgb_de(rgb_de),

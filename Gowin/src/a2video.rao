@@ -54,6 +54,9 @@
                 <Signal>rgb_data[1]</Signal>
                 <Signal>rgb_data[0]</Signal>
             </Bus>
+            <Signal capture_enable="true">u_a2video/window</Signal>
+            <Signal capture_enable="true">u_a2video/rgb_de</Signal>
+            <Signal capture_enable="true">gr</Signal>
         </SignalList>
         <Triggers>
             <Trigger index="0">
@@ -124,5 +127,5 @@
             <Expression>M3</Expression>
         </Expressions>
     </AoCore>
-    <GAO_ID>0101010001011110</GAO_ID>
+    <GAO_ID>1110110000001010</GAO_ID>
 </GAO_CONFIG>

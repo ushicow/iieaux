@@ -9,6 +9,7 @@
 // --------------------------------------------------------------------
 //   1.0   | 2026/03/23  | ushicow |    initial
 //   1.1.2 | 2026/03/29  | ushicow | color graphics
+//   2.0.3 | 2026/05/17  | ushicow | pixel alignment
 // --------------------------------------------------------------------
 `default_nettype none
 
@@ -19,6 +20,7 @@ module Apple2_Video (
     input wire I_serout_n,          // Apple II serial video out
     input wire I_gr,                // Graphic mode
     input wire I_mono,              // Mono chrome mode
+    input wire [1:0] I_sw,          // Text color mode
     output wire O_rgb_vs_n,         // RGB vertical sync, negative
     output wire O_rgb_hs_n,         // RGB horizontal sync, negative
     output wire O_rgb_de,           // RGB data enable
@@ -26,10 +28,12 @@ module Apple2_Video (
 );
 
 parameter APPLE_SYNC = 56;
+parameter BOADER_PIXEL = 40;
 parameter ACTIVE_PIXEL = 640; // 40+560+40
 parameter FPORCH_PIXEL = 79;  // 119-40
 parameter SYNC_PIXEL = 56;
 parameter BPORCH_PIXEL = 137; // 177-40
+parameter BOADER_LINE = 24;
 parameter ACTIVE_LINE = 240;  // 24+192+24
 parameter FPORCH_LINE = 7;    // 31-24
 parameter SYNC_LINE = 4;
@@ -51,6 +55,9 @@ parameter LIGHT_GREEN = 24'h11dd00;
 parameter YELLOW      = 24'hffff00;
 parameter AQUAMARINE  = 24'h44ff99;
 parameter BLACK       = 24'h000000;
+
+parameter AMBER       = 24'hffbf00;
+parameter GREEN       = 24'h41ff00;
 
 logic [8:0] line;
 logic [9:0] pixel;
@@ -96,16 +103,31 @@ end
 
 always_ff@(posedge I_clk14m) begin
     if ((line > BPORCH_LINE) & (line <= (BPORCH_LINE + ACTIVE_LINE))
-            & (pixel >= (BPORCH_PIXEL - 1)) & (pixel < (BPORCH_PIXEL + ACTIVE_PIXEL - 1))) begin
+            & (pixel > BPORCH_PIXEL) & (pixel <= (BPORCH_PIXEL + ACTIVE_PIXEL))) begin
         rgb_de <= 1;
     end else begin
         rgb_de <= 0;
     end
 end
 
+logic window;
+always_ff@(posedge I_clk14m) begin
+    if ((line >= (BPORCH_LINE + BOADER_LINE)) & (line < (BPORCH_LINE + ACTIVE_LINE - BOADER_LINE))
+            & (pixel > (BPORCH_PIXEL + BOADER_PIXEL + 4)) & (pixel <= (BPORCH_PIXEL + ACTIVE_PIXEL - BOADER_PIXEL + 13))) begin
+        window <= 1;
+    end else begin
+        window <= 0;
+    end
+end
+
 logic [23:0] bw_data;
 always_ff@(posedge I_clk14m) begin
-    bw_data <= I_serout_n ? BLACK : WHITE;
+    case (I_sw)
+        2'b00: bw_data <= I_serout_n ? BLACK : WHITE;
+        2'b10: bw_data <= I_serout_n ? BLACK : AMBER;
+        2'b01: bw_data <= I_serout_n ? MEDIUM_BLUE : WHITE;
+        default: bw_data <= I_serout_n ? BLACK : GREEN;
+    endcase
 end
 
 logic [3:0] code;
@@ -144,10 +166,15 @@ always_comb begin
     endcase
 end
 
+logic gr;
+always_ff@(posedge I_clk14m) begin
+    gr <= I_gr;
+end
+
 assign O_rgb_vs_n = rgb_vs_n;
 assign O_rgb_hs_n = rgb_hs_n;
 assign O_rgb_de = rgb_de;
-assign O_rgb_data = (I_gr & !I_mono) ? rgb_data : bw_data;
+assign O_rgb_data = (gr & !I_mono & window) ? rgb_data : bw_data;
 
 endmodule
 

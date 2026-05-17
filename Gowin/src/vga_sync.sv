@@ -76,18 +76,19 @@ end
 
 always@(posedge I_pxl_clk or negedge I_rst_n)
 begin
-	if(!I_rst_n)
+	if (!I_rst_n) begin
 		begin 
 			O_vs_n  <= 1;
 			O_hs_n  <= 1;
 			O_de  <= 0;                       
 		end
-	else 
+	end else begin 
 		begin   
 			O_vs_n  <= vga_vs_n;
 			O_hs_n  <= vga_hs_n;
 			O_de  <= vga_de;                      
 		end
+    end
 end
 
 endmodule
