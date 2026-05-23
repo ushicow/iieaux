@@ -176,7 +176,6 @@ PsramController #(.FREQ(72_000_000)) u_psc (
     .O_psram_cs_n(O_psram_cs_n[1]),
     .O_psram_reset_n(O_psram_reset_n[1])
 );
-assign O_psram_ck_n = 0;
 
 logic dout_en;
 always_ff@(posedge memory_clk) begin
